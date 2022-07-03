@@ -1,0 +1,17 @@
+@import "../../utilities/color-themes.scss";
+
+$dummy-bg-photo : "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80";
+
+.cst-cer-bg-photo{
+    background-image: url($dummy-bg-photo);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 70px 0 70px 0;
+}
+
+.cst-cer-info-frame{
+    color: #fff;
+    background-color: rgba($color-four, 0.6);
+    border-radius: 45px;
+}

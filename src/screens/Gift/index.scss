@@ -1,0 +1,17 @@
+.cst-gift-wrap{
+    position: relative;
+    height: 100vh;
+    color: #fff;
+}
+
+.cst-gift-bg-photo{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: brightness(30%);
+}
+
+.cst-gift-content{
+    z-index: 9;
+}

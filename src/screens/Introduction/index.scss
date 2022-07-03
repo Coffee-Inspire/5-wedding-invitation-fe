@@ -1,0 +1,22 @@
+.cst-intro-row{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.cst-intro-photo{
+    width: 500px;
+    height: 500px;    
+    object-fit: cover;
+    // Image Position Scaling Handle
+    object-position: 0 -50px;
+    filter: grayscale(80%);
+}
+
+.cst-intro-name-card{
+    width: 70%;
+    text-align: center;
+
+    h1{
+        letter-spacing: 8px;
+    }
+}

@@ -1,0 +1,57 @@
+@import "utilities/color-themes.scss";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.cst-text-highlight-one{
+  color: $color-one;
+}
+
+.cst-text-highlight-two{
+    color: $color-two;
+}
+
+option{
+  color: #000;
+}
+
+.cst-form{
+  color: #fff !important;
+  background-color: rgba(#fff, 0) !important;
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid #fff !important;
+  padding: 12px 5px 12px 5px !important;
+}
+
+.cst-select{
+  color: #fff !important;
+  background-color: rgba(#fff, 0) !important;
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid #fff !important;
+  cursor: pointer;
+  fill: red !important;
+  padding: 12px 5px 12px 5px !important;
+}
+
+.cst-textarea{
+  color: #fff !important;
+  background-color: rgba(#fff, 0) !important;
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid #fff !important;
+  padding: 0 5px 0 5px !important;
+}
+
