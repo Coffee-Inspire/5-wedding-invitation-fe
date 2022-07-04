@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {Container} from 'react-bootstrap'
 
 import Introduction from './Introduction'
@@ -10,10 +10,23 @@ import Gift from './Gift'
 import Wishes from './Wishes'
 import EndCover from './EndCover'
 import Footer from '../components/Footer'
+import Cover from './Cover'
 
-function index() {
+function Index() {
+
+  const [show, setShow] = useState(true)
+
+  useEffect(() => {
+    setShow(true)
+  }, [])
+  
+
   return (
     <Container fluid className='p-0'>
+      <Cover
+        show={show}
+        setShow={setShow}
+      />
       <Introduction/>
       <Ceremony/>
       <LiveStreaming/>
@@ -27,4 +40,4 @@ function index() {
   )
 }
 
-export default index
+export default Index
