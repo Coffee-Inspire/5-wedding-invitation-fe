@@ -5,7 +5,7 @@ import './index.scss'
 function Introduction() {
   return (
     <>
-        <Row className="m-0 cst-intro-row">
+        <Row className="mx-0 mb-3 cst-intro-row">
             <Col md={5} className='px-0 d-flex align-items-center'>
                 <img
                     src={"https://images.unsplash.com/photo-1546572797-e8c933a75a1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"}
@@ -22,7 +22,7 @@ function Introduction() {
             </Col>
         </Row>
 
-        <Row className="m-0 cst-intro-row">
+        <Row className="mx-0 mb-3 cst-intro-row">
             <Col md={7} className='d-flex justify-content-center align-items-center'>
                 <div className='cst-intro-name-card'>
                     <h1 className='py-3 cst-text-highlight-two cst-intro-text-spacing fw-normal'>MEGA PISTIA</h1>

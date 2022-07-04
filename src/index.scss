@@ -22,6 +22,10 @@ code {
     color: $color-two;
 }
 
+.cst-text-darken{
+  color: darken(#fff, 30%);
+}
+
 option{
   color: #000;
 }

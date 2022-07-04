@@ -1,5 +1,6 @@
 import React from 'react'
 import {Row, Col, Form} from 'react-bootstrap'
+import axios from 'axios'
 import { useForm } from "react-hook-form";
 import './index.scss'
 
@@ -15,7 +16,13 @@ function Reservation() {
     }
 
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => postData(data);
+    
+
+    const postData = (data) => {
+        axios.post(process.env.REACT_APP_RSVP_API, data)
+        .then(res => {} )
+    }
     
     return (
         <div className='d-flex flex-column justify-content-center cst-reserve-bg-photo'>

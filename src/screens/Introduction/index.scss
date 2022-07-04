@@ -1,12 +1,23 @@
+@media only screen and (max-width: 450px) {
+    .cst-intro-photo{
+        height: 100% !important;
+        
+        // Image Position Scaling Handle
+        // object-position: 0 -50px;
+        // filter: grayscale(80%);
+    }
+  }
+
 .cst-intro-row{
     height: 100vh;
     overflow: hidden;
 }
 
 .cst-intro-photo{
-    width: 500px;
-    height: 500px;    
+    width: 580px;
+    height: 580px;    
     object-fit: cover;
+
     // Image Position Scaling Handle
     object-position: 0 -50px;
     filter: grayscale(80%);
