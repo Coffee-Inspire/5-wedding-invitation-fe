@@ -61,7 +61,7 @@ function Reservation() {
                                 </Col>
 
                                 <Col md={3} className='p-0 d-flex  align-items-center'>
-                                    <label>Jumlah Tamu</label>
+                                    <label>Kehadiran Tamu</label>
                                 </Col>  
                                 <Col md={9} className='p-0'>
                                    <Form.Select
