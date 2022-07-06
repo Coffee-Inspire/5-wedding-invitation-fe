@@ -2,6 +2,7 @@ import React from 'react'
 import {Row, Col, Form} from 'react-bootstrap'
 import axios from 'axios'
 import { useForm } from "react-hook-form";
+import toCapitalize from '../../helpers/toCapitalize';
 import './index.scss'
 
 import BannerOverlay from '../../components/BannerOverlay'
@@ -15,13 +16,17 @@ function Reservation() {
         buttonText: "send"
     }
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => postData(data);
     
-
     const postData = (data) => {
+        data = {
+            ...data,
+            guestName: toCapitalize(data.guestName)
+        }        
         axios.post(process.env.REACT_APP_RSVP_API, data)
         .then(res => {} )
+        reset()
     }
     
     return (

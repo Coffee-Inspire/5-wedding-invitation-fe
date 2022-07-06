@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 import {Row, Col, Form} from 'react-bootstrap'
 import { useForm } from "react-hook-form";
+import toCapitalize from '../../helpers/toCapitalize';
 import './index.scss'
 
 import Button from '../../components/Button'
@@ -10,12 +11,17 @@ import WishCard from './WishCard';
 function Wishes() {
 
     const [data, setData] = useState([])
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => postData(data);
 
     const postData = (data) => {
+        data = {
+            ...data,
+            name: toCapitalize(data.name)
+        } 
         axios.post(process.env.REACT_APP_WISH_API, data)
         .then(res => setData(res.data.data) )
+        reset()
     }
 
     const getData = () => {
