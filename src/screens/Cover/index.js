@@ -3,22 +3,26 @@ import {Row, Col} from 'react-bootstrap'
 import './index.scss'
 
 import Button from '../../components/Button'
+import {fadeIn} from '../../helpers/musicFadeInOut'
 
 function Cover(props) {
 
     const {
         show,
-        setShow
+        setShow,
+        music
     } = props
 
     const contentData = {
         cover: "https://images.unsplash.com/photo-1621621667797-e06afc217fb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
     }
 
-    const closeCover = () => {        
+    const closeCover = () => { 
         setShow(false)
         document.body.style.overflow = "auto"
-
+        fadeIn(music);
+        music.play();
+        music.loop = true;
     }
 
     useEffect(() => {
