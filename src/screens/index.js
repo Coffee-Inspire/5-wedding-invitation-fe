@@ -13,7 +13,7 @@ import EndCover from './EndCover'
 import Footer from '../components/Footer'
 import Cover from './Cover'
 
-import Song from '../assets/Inspiring Classical Piano.mp3'
+import Song from '../assets/yiruma-6th-P.N.O.N.I-Love.mp3'
 
 function Index() {
 
