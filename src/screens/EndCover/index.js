@@ -2,8 +2,6 @@ import React from 'react'
 import {Row, Col} from 'react-bootstrap'
 import './index.scss'
 
-import Button from '../../components/Button'
-
 function EndCover() {
 
     const screenContent = {

@@ -3,7 +3,7 @@ import './index.scss'
 
 function BannerOverlay({children, className}) {
   return (
-    <div className={`${className} ` + `cst-banner-overlay` }>
+    <div className={`${className} cst-banner-overlay`}>
         {children}
     </div>
   )

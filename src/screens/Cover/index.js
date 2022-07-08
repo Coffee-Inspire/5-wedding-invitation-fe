@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react'
 import {Row, Col} from 'react-bootstrap'
-import {useSearchParams } from 'react-router-dom'
 import './index.scss'
 
 import Button from '../../components/Button'
