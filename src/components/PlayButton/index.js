@@ -5,7 +5,7 @@ import './index.scss'
 
 import {fadeIn, fadeOut} from '../../helpers/musicFadeInOut'
 
-function Index(props) {
+function PlayButton(props) {
 
   const {music} = props;
   const [isplaying, setIsPlaying] = useState(true);
@@ -41,4 +41,4 @@ function Index(props) {
   )
 }
 
-export default Index
+export default PlayButton;
