@@ -16,4 +16,5 @@ const fadeIn = async (music) => {
     }
 }
 
-module.exports = {fadeIn, fadeOut};
+// module.exports = {fadeIn, fadeOut};
+export {fadeIn, fadeOut};
