@@ -1,5 +1,12 @@
 @import "../../utilities/color-themes.scss";
 
+@media only screen and (max-width: 909px) {
+    .cst-banner-overlay{
+        padding-top: 35px !important;
+        padding-bottom: 35px !important;
+    }
+}
+
 .cst-banner-overlay{
     background-color: rgba($color-four, 0.6);
     padding-top: 120px;

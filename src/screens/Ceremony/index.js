@@ -2,6 +2,7 @@ import React from 'react'
 import {Row, Col} from 'react-bootstrap'
 import './index.scss'
 
+import PhotoCeremony from '../../assets/photos/ceremony.jpeg'
 import CeremonyInfoCard from '../../components/CeremonyInfoCard'
 
 function Ceremony() {

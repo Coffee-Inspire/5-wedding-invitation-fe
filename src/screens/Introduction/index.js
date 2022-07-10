@@ -2,13 +2,16 @@ import React from 'react'
 import {Row, Col} from 'react-bootstrap'
 import './index.scss'
 
+import PhotoGroom from '../../assets/photos/man.jpeg'
+import PhotoBride from '../../assets/photos/female.jpeg'
+
 function Introduction() {
   return (
     <>
         <Row className="mx-0 mb-3 cst-intro-row">
             <Col md={5} className='px-0 d-flex align-items-center'>
                 <img
-                    src={"https://images.unsplash.com/photo-1546572797-e8c933a75a1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"}
+                    src={PhotoGroom}
                     className='cst-intro-photo'
                     alt=""
                 />                
@@ -36,7 +39,7 @@ function Introduction() {
             </Col>
             <Col md={5} className='px-0 d-flex justify-content-end align-items-center'>
                 <img
-                    src={"https://images.unsplash.com/photo-1605406575497-015ab0d21b9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"}
+                    src={PhotoBride}
                     className='cst-intro-photo'
                     alt=""
                 />                

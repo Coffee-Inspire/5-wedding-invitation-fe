@@ -1,3 +1,14 @@
+// @import "../../utilities/text-themes.scss";
+
+// @font-face {
+//     // Google Font - Poiret One (Regular)
+//     font-family: 'Poiret One', cursive;
+//     src: url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+// }
+
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+
+
 .cst-cover-container{
     background-color: #fff;
     position: fixed;
@@ -30,10 +41,11 @@
     padding-bottom: 100px;
 }
 
-.cst-cover-bride{
+.cst-cover-bridegroom{
     letter-spacing: 10px;
     margin-left: 10px;
     font-weight: lighter;
+    font-family: 'Poiret One', cursive;
 }
 
 .cst-cover-dear{

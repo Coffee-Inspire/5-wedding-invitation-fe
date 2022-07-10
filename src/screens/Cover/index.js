@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import {Row, Col} from 'react-bootstrap'
 import './index.scss'
 
+import PhotoCover from '../../assets/photos/cover.jpeg'
 import Button from '../../components/Button'
 import {fadeIn} from '../../helpers/musicFadeInOut'
 
@@ -15,9 +16,6 @@ function Cover(props) {
 
     const params = (new URL(document.location)).searchParams;
     const guest = params.get('guest');
-    const contentData = {        
-        cover: "https://images.unsplash.com/photo-1474401639975-278ecfd1b421?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=875&q=80"
-    }
 
     const closeCover = () => { 
         setShow(false)
@@ -38,12 +36,12 @@ function Cover(props) {
         >
             <img
                 className='cst-cover-photo'
-                src={contentData.cover}
+                src={PhotoCover}
                 alt=""
             />
             <Row className='m-0 cst-cover-content'>
                 <Col md={6} className='text-center'>
-                    <h1 className='cst-cover-bride m-4'>PETER & MEGA</h1>
+                    <h1 className='cst-cover-bridegroom m-4'>PETER & MEGA</h1>
                     {guest && 
                         <>
                             <h5 className='cst-cover-dear'>Dear :</h5>
