@@ -15,7 +15,6 @@ function EndCover() {
     
     return (
         <div className='d-flex justify-content-center align-items-center cst-end-wrap'>
-            <img src={screenContent.backgroundImage} className='cst-end-bg-photo' alt=""/>
             <Row className='m-0 d-flex justify-content-center cst-end-content'>
                 <Col xs={10} md={7} className='text-center'>
                     <h3 className='cst-end-title'>
