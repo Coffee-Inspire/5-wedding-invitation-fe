@@ -22,6 +22,10 @@ function Introduction() {
             </Col>
         </Row>
 
+        <div className='text-center d-block d-md-none'>
+            <h1>&</h1>
+        </div>
+
         <Row className="mx-0 mb-3 cst-intro-row">
             <Col md={7} className='d-flex justify-content-center align-items-center'>
                 <div className='cst-intro-name-card'>
