@@ -15,7 +15,6 @@ function Gift() {
 
     const [showPanel, setShowPanel] = useState(false);
     const handleShowPanel = () => setShowPanel(true);
-    const handleClosePanel = () => setShowPanel(false);
 
     return (
         <div className='d-flex flex-column justify-content-center cst-gift-wrap'>
