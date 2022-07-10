@@ -1,8 +1,34 @@
+@import "../../utilities/color-themes.scss";
+
+@media only screen and (max-width: 767px) {
+    .cst-wish-panel-qr{
+        border-right: none !important;
+    }
+    
+    .cst-wish-panel-backacc{
+        border-left: none !important;
+    }
+}
+
 .cst-gift-wrap{
     position: relative;
     height: 100vh;
     color: #fff;
+
+    background-image: url("https://images.unsplash.com/photo-1610599905570-0dc5693fe584?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(3px) brightness(80%);
+        pointer-events: none;
+    }
 }
+
 
 .cst-gift-bg-photo{
     position: absolute;
@@ -13,5 +39,25 @@
 }
 
 .cst-gift-content{
-    z-index: 9;
+    z-index: 5;
+}
+
+.cst-wish-panel{
+    background-color: rgba($color-three, 0.9);   
+    padding: 40px 0; 
+    border-radius: 45px;
+}
+
+.cst-wish-panel-qr{
+    border-right: 3px solid #fff ;
+    padding: 35px 0;        
+}
+
+.cst-wish-panel-backacc{
+    border-left: 3px solid #fff ;
+    padding: 35px 0;
+}
+
+.cst-wish-qr-img{
+    
 }
