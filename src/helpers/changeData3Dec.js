@@ -4,9 +4,9 @@
     const day = dateObj.getUTCDate();
     const year = dateObj.getUTCFullYear();
 
-    const hour = dateObj.getUTCHours();
-    const minute = dateObj.getUTCMinutes();
-    const sec = dateObj.getUTCSeconds();
+    // const hour = dateObj.getUTCHours();
+    // const minute = dateObj.getUTCMinutes();
+    // const sec = dateObj.getUTCSeconds();
 
     const dateLimit = {
         day : 3,

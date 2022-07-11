@@ -14,7 +14,7 @@ import Footer from '../components/Footer'
 import Cover from './Cover'
 
 import Song from '../assets/yiruma-6th-P.N.O.N.I-Love.mp3'
-import check3Dec from '../helpers/changeData3Dec';
+// import check3Dec from '../helpers/changeData3Dec';
 
 function Index() {
 
