@@ -14,6 +14,7 @@ import Footer from '../components/Footer'
 import Cover from './Cover'
 
 import Song from '../assets/yiruma-6th-P.N.O.N.I-Love.mp3'
+import check3Dec from '../helpers/changeData3Dec';
 
 function Index() {
 
@@ -23,21 +24,6 @@ function Index() {
   useEffect(() => {
     setShow(true)
   }, [])
-
-  let dateObj = new Date();
-  let month = dateObj.getUTCMonth() +1;
-  let day = dateObj.getUTCDate();
-  let year = dateObj.getUTCFullYear();
-
-  let hour = dateObj.getUTCHours();
-  let minute = dateObj.getUTCMinutes();
-  let sec = dateObj.getUTCSeconds();
-
-  console.log(hour + " " + minute + " " + sec)
-
-  let newdate = year + "/" + month + "/" + day;
-  
-  console.log("Test ", newdate)
 
   return (
     <Container fluid className='p-0'>
@@ -56,7 +42,9 @@ function Index() {
       <LiveStreaming/>
       <Reservation/>
       <Gallery/>
-      <Gift/>
+      {/* {check3Dec() && */}
+        <Gift/>
+      {/* } */}
       <Wishes/>
       <EndCover/>
       <Footer/>

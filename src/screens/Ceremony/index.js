@@ -4,6 +4,8 @@ import './index.scss'
 
 import CeremonyInfoCard from '../../components/CeremonyInfoCard'
 
+import check3Dec from '../../helpers/changeData3Dec';
+
 function Ceremony() {
 
     const ceremonyData = [
@@ -29,16 +31,24 @@ function Ceremony() {
         }
     ]
 
+    check3Dec();
+
     return (
         <div className='cst-cer-bg-photo'>
             <Row className='m-0 d-flex justify-content-center align-items-center'>
                 <Col xs={10} md={7} className='p-0 cst-cer-info-frame'>
-                    {ceremonyData.map((item, index) => (
+                    {
+                        check3Dec() ?
+                        <CeremonyInfoCard props={ceremonyData[1]} />
+                        :
+                        <CeremonyInfoCard props={ceremonyData[0]} />
+                    }
+                    {/* {ceremonyData.map((item, index) => (
                         <CeremonyInfoCard
                             key={index}
                             props={item}
                         />                        
-                    ))}
+                    ))} */}
                 </Col>
             </Row>
         </div>
