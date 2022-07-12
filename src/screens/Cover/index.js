@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import {Row, Col} from 'react-bootstrap'
 import './index.scss'
 
-// import PhotoCover from '../../assets/photos/cover.jpeg'
+import PhotoCover from '../../assets/photos/cover.jpeg'
 import Button from '../../components/Button'
 import {fadeIn} from '../../helpers/musicFadeInOut'
 
@@ -13,8 +13,7 @@ function Cover(props) {
         setShow,
         music
     } = props
-    
-    const PhotoCover = "https://uc219e06ad7c42d7d17cd6e1eace.previews.dropboxusercontent.com/p/thumb/ABmFkC98z7YxtpHcZLyHt6k6XtwhxzOlDd6NUyRc9fC7XL1YCRmwuFznrV6XsNqo09okKA2j_cOJqrYuNVbrJlR-7tPVb7L1oGMso4p7PfnVMQBKBOL2MoQm-c3jWTy507ZREsh6Wiiz5iUofkVHv0JFv-VRBHeNWI02UWYM-hBsTjCAQjBI0ryjA2I8OmxZ3-MeRGQQK2otbrrEJ4m--tlDvwKQnZK8MQLIE93jMfNZd8sDIaJjRzXhwzn9Femc14e1N4JbVwcstV4R_568L3qYjTcWCHIhiB4XMVliXQdtSMEfz0z5_GQlNUxnvr8Ico3q6bwTd_pbUvFlmLJzkKc1BcWJVhOKDrtQ20lkPJMdKyLpGOS5Unxp6cTk3qCnhXD-Zf8M5nq2THvO_hj_o0dOrULW9EL1iWeCKWPpK3w8_vHQ8FPJRa1AyAH-CR3hN8DERjpZwZMzoNtlHvMxCnLO6qnPUPhWS6E5siu-vTbJag/p.jpeg"
+        
     const params = (new URL(document.location)).searchParams;
     const guest = params.get('guest');
 

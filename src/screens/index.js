@@ -13,7 +13,7 @@ import EndCover from './EndCover'
 import Footer from '../components/Footer'
 import Cover from './Cover'
 
-import Song from '../assets/yiruma-6th-P.N.O.N.I-Love.mp3'
+import Song from '../assets/i-was-made-for-loving-you.mp3'
 // import check3Dec from '../helpers/changeData3Dec';
 
 function Index() {
