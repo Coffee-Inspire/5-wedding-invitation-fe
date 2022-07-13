@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import {Row, Col} from 'react-bootstrap'
 import './index.scss'
 
-import PhotoCover from '../../assets/photos/cover.jpeg'
+import PhotoCover from '../../assets/photos/cover.jpg'
 import Button from '../../components/Button'
 import {fadeIn} from '../../helpers/musicFadeInOut'
 
@@ -13,7 +13,7 @@ function Cover(props) {
         setShow,
         music
     } = props
-        
+    
     const params = (new URL(document.location)).searchParams;
     const guest = params.get('guest');
 

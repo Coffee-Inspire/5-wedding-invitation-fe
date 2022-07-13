@@ -2,12 +2,12 @@ import React from 'react'
 import {Row, Col} from 'react-bootstrap'
 import './index.scss'
 
-import One from "../../assets/photos/galleries/1.jpeg";
-import Two from "../../assets/photos/galleries/2.jpeg";
-import Three from "../../assets/photos/galleries/3.jpeg";
-import Four from "../../assets/photos/galleries/4.jpeg";
-import Five from "../../assets/photos/galleries/5.jpeg";
-import Six from "../../assets/photos/galleries/6.jpeg";
+import One from "../../assets/photos/galleries/1.jpg";
+import Two from "../../assets/photos/galleries/2.jpg";
+import Three from "../../assets/photos/galleries/3.jpg";
+import Four from "../../assets/photos/galleries/4.jpg";
+import Five from "../../assets/photos/galleries/5.jpg";
+import Six from "../../assets/photos/galleries/6.jpg";
 
 function Gallery() {
 

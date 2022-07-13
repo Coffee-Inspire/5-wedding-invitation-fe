@@ -2,8 +2,8 @@ import React from 'react'
 import {Row, Col} from 'react-bootstrap'
 import './index.scss'
 
-import PhotoGroom from '../../assets/photos/man.jpeg'
-import PhotoBride from '../../assets/photos/female.jpeg'
+import PhotoGroom from '../../assets/photos/man.jpg'
+import PhotoBride from '../../assets/photos/female.jpg'
 
 function Introduction() {
   return (
