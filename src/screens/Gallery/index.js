@@ -8,6 +8,11 @@ import Three from "../../assets/photos/galleries/3.jpg";
 import Four from "../../assets/photos/galleries/4.jpg";
 import Five from "../../assets/photos/galleries/5.jpg";
 import Six from "../../assets/photos/galleries/6.jpg";
+import Seven from "../../assets/photos/galleries/7.jpg";
+import Eight from "../../assets/photos/galleries/8.jpg";
+import Nine from "../../assets/photos/galleries/9.jpg";
+import Ten from "../../assets/photos/galleries/10.jpg";
+import Eleven from "../../assets/photos/galleries/11.jpg";
 
 function Gallery() {
 
@@ -17,7 +22,12 @@ function Gallery() {
         three: Three,
         four: Four,
         five: Five,
-        six: Six
+        six: Six,
+        seven: Seven,
+        eight: Eight,
+        nine: Nine,
+        ten: Ten,
+        eleven: Eleven
     }
     
   return (
@@ -63,6 +73,41 @@ function Gallery() {
                 <img
                     className='cst-gallery-photo'
                     src={contentDummy.six}
+                    alt=""
+                />
+            </Col>
+            <Col md={3} className='cst-gallery-header-frame'>
+                <img
+                    className='cst-gallery-photo'
+                    src={contentDummy.seven}
+                    alt=""
+                />
+            </Col>
+            <Col md={3} className='cst-gallery-header-frame'>
+                <img
+                    className='cst-gallery-photo'
+                    src={contentDummy.eight}
+                    alt=""
+                />
+            </Col>
+            <Col md={6} className='cst-gallery-header-frame'>
+                <img
+                    className='cst-gallery-photo'
+                    src={contentDummy.nine}
+                    alt=""
+                />
+            </Col>
+            <Col md={5} className='cst-gallery-header-frame'>
+                <img
+                    className='cst-gallery-photo'
+                    src={contentDummy.ten}
+                    alt=""
+                />
+            </Col>
+            <Col md={7} className='cst-gallery-header-frame'>
+                <img
+                    className='cst-gallery-photo'
+                    src={contentDummy.eleven}
                     alt=""
                 />
             </Col>
