@@ -3,8 +3,14 @@
         padding-bottom: 50px !important;
     }
 
-    .cst-intro-photo{
+    .cst-intro-photo-one{
         height: 100% !important;
+        object-position: center right;
+    }
+
+    .cst-intro-photo-two{
+        // height: 100% !important;
+        object-position: -95px -150px;
     }
 
     .cst-intro-and{
@@ -14,12 +20,14 @@
 
 
 @media only screen and (max-width: 450px) {
-    .cst-intro-photo{
+    .cst-intro-photo-one{
         height: 100% !important;
-        
-        // Image Position Scaling Handle
-        // object-position: 0 -50px;
-        // filter: grayscale(80%);
+        object-position: center right;
+    }
+
+    .cst-intro-photo-two{
+        // height: 100% !important;
+        object-position: -60px 0;
     }
   }
 
@@ -33,7 +41,17 @@
     overflow: hidden;
 }
 
-.cst-intro-photo{
+.cst-intro-photo-one{
+    width: 580px;
+    height: 580px;    
+    object-fit: cover;
+
+    // Image Position Scaling Handle
+    // object-position: 0 -50px;
+    // filter: grayscale(80%);
+}
+
+.cst-intro-photo-two{
     width: 580px;
     height: 580px;    
     object-fit: cover;

@@ -1,5 +1,29 @@
 $PhotoEnd: "../../assets/photos/ceremony.jpg";
 
+@media (min-width: 600px) and (max-width: 768px) {
+    .cst-end-wrap{
+        background-position: center;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 599px) {
+    .cst-end-wrap{
+        background-position: -210px 0;
+    }
+}
+
+@media (min-width: 415px) and (max-width: 500px) {
+    .cst-end-wrap{
+        background-position: -250px 0;
+    }
+}
+
+@media (max-width: 414px) {
+    .cst-end-wrap{
+        background-position: -280px 0;
+    }
+}
+
 .cst-end-wrap{
     position: relative;
     height: 100vh;
