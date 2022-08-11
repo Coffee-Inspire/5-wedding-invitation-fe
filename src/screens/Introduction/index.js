@@ -45,8 +45,8 @@ function Introduction(props) {
                 </AnimationOnScroll>
             </Col>
 
-            <Col md={12} lg={5} className='p-0'>
-                <AnimationOnScroll animateIn="animate__fadeIn" animateOnce className='px-0 d-flex justify-content-end align-items-center'>
+            <Col md={12} lg={5} className='px-0 d-flex justify-content-end align-items-center'>
+                <AnimationOnScroll animateIn="animate__fadeIn" animateOnce >
                 <img
                     src={PhotoBride}
                     className='cst-intro-photo-two'
