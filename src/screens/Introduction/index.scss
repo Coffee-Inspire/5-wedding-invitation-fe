@@ -1,3 +1,18 @@
+@media only screen and (max-width: 768px) {
+    .cst-intro-padding-bottom{
+        padding-bottom: 50px !important;
+    }
+
+    .cst-intro-photo{
+        height: 100% !important;
+    }
+
+    .cst-intro-and{
+        display: block !important;
+    }
+  }
+
+
 @media only screen and (max-width: 450px) {
     .cst-intro-photo{
         height: 100% !important;
@@ -7,6 +22,11 @@
         // filter: grayscale(80%);
     }
   }
+
+.cst-intro-and{
+    text-align: center;
+    display: none;
+}
 
 .cst-intro-row{
     height: 100vh;
