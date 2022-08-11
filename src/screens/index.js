@@ -29,6 +29,7 @@ function Index() {
     <Container fluid className='p-0'>
       <Cover
         show={show}
+        // show={false}
         setShow={setShow}
         music={music}
       />
@@ -37,7 +38,7 @@ function Index() {
           music={music}
         />
       }
-      <Introduction/>
+      <Introduction show={show}/>
       <Ceremony/>
       <LiveStreaming/>
       <Reservation/>

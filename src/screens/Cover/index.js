@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import {Row, Col} from 'react-bootstrap'
 import './index.scss'
+import "animate.css/animate.min.css";
 
 import PhotoCover from '../../assets/photos/cover.jpg'
 import Button from '../../components/Button'
@@ -23,6 +24,9 @@ function Cover(props) {
         fadeIn(music);
         music.play();
         music.loop = true;
+        setTimeout(()=>{
+            document.querySelector("#cover").style.display = "none";
+        }, 1200)
     }
 
     useEffect(() => {
@@ -31,8 +35,9 @@ function Cover(props) {
     
 
     return (
-        <div
-            className={(show ? 'd-block' : 'd-none') + ' cst-cover-container'}
+        <div id="cover"
+            // className={(show ? 'd-block' : 'd-none') + ' cst-cover-container'}
+            className={(show ? 'd-block' : 'animate__animated animate__fadeOut') + ' cst-cover-container'}
         >
             <img
                 className='cst-cover-photo'
@@ -41,7 +46,7 @@ function Cover(props) {
             />
             <Row className='m-0 cst-cover-content'>
                 <Col md={6} className='text-center'>
-                    <h1 className='cst-cover-bridegroom m-4'>PETER & MEGA</h1>
+                    <h1 className='cst-cover-bridegroom m-4'>PETER {`&`} MEGA</h1>
                     {guest && 
                         <>
                             <h5 className='cst-cover-dear'>Dear :</h5>
