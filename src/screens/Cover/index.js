@@ -9,6 +9,10 @@ import {fadeIn} from '../../helpers/musicFadeInOut'
 
 function Cover(props) {
 
+    const test = () => {
+        setTimeout(() => (PhotoCover), 2000)
+    }
+
     const {
         show,
         setShow,
@@ -37,12 +41,12 @@ function Cover(props) {
     return (
         <div id="cover"
             // className={(show ? 'd-block' : 'd-none') + ' cst-cover-container'}
-            className={(show ? 'd-block' : 'animate__animated animate__fadeOut') + ' cst-cover-container'}
+            className={(show ? 'd-block' : 'animate__animated animate__fadeOut') + ' cst-cover-container bg-secondary'}
         >
             <img
                 className='cst-cover-photo'
                 src={PhotoCover}
-                alt=""
+                alt=""                
             />
             <Row className='m-0 cst-cover-content'>
                 <Col md={6} className='text-center'>
