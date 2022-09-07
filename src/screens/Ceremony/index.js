@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Row, Col } from "react-bootstrap";
 import "./index.scss";
 
-import moment from "moment";
-
+import CountdownTimer from "../../components/CountdownTimer";
 import CeremonyInfoCard from "../../components/CeremonyInfoCard";
 import timing from "../../helpers/timing";
-import CountdownTimer from "../../components/CountdownTimer";
 
 function Ceremony() {
   const ceremonyData = [

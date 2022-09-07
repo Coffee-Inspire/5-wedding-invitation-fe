@@ -32,27 +32,23 @@ function CountdownTimer() {
     },
   };
 
-  const getTimelapse = () => {
-    const currentDate = moment();
-    const parseToSecond = deadline.diff(currentDate, "seconds");
-    const timelapse = moment.duration(parseToSecond, "seconds");
-    const data = timelapse._data;
-    if (data.seconds >= 0) {
-      setYearLeft(data.years);
-      setMonthLeft(data.months);
-      setDayLeft(data.days);
-      setHourLeft(data.hours);
-      setMinuteLeft(data.minutes);
-      setSecondLeft(data.seconds);
-    }
-  };
-
   useEffect(() => {
     const intervalId = setInterval(() => {
-      getTimelapse();
+      const currentDate = moment();
+      const parseToSecond = deadline.diff(currentDate, "seconds");
+      const timelapse = moment.duration(parseToSecond, "seconds");
+      const data = timelapse._data;
+      if (data.seconds >= 0) {
+        setYearLeft(data.years);
+        setMonthLeft(data.months);
+        setDayLeft(data.days);
+        setHourLeft(data.hours);
+        setMinuteLeft(data.minutes);
+        setSecondLeft(data.seconds);
+      }
     }, 1000);
     return () => clearInterval(intervalId);
-  }, []);
+  }, [deadline]);
 
   return (
     <Row className="d-flex justify-content-center cst-countdown-row">

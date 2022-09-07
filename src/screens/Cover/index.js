@@ -8,10 +8,6 @@ import Button from "../../components/Button";
 import { fadeIn } from "../../helpers/musicFadeInOut";
 
 function Cover(props) {
-  const test = () => {
-    setTimeout(() => PhotoCover, 2000);
-  };
-
   const { show, setShow, music } = props;
 
   const params = new URL(document.location).searchParams;

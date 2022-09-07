@@ -14,7 +14,7 @@ import Footer from "../components/Footer";
 import Cover from "./Cover";
 
 import Song from "../assets/i-was-made-for-loving-you.mp3";
-import check3Dec from "../helpers/changeData3Dec";
+// import check3Dec from "../helpers/changeData3Dec";
 import timing from "../helpers/timing";
 
 function Index() {
