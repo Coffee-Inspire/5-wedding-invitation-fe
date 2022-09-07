@@ -11,24 +11,30 @@ function Ceremony() {
     {
       title: "pemberkatan",
       buttonTitle: "google maps",
-      locationText:
-        "Lorem ipsum dolor sit amet, consectus adispicing elit. Aliquas quis sodales metus",
+      building: "IFGF Semarang",
+      address:
+        "Jl. Kompol Maksum No.195, Peterongan, Kec. Semarang Sel., Kota Semarang, Jawa Tengah 50242",
       day: "minggu",
       month: "dec",
       date: "03",
       year: "2022",
-      time: "09:00 - 11:00",
+      time: "11:00 - Selesai",
+      targetLink:
+        "https://www.google.com/maps/place/IFGF+Semarang/@-6.9962337,110.4313532,17z/data=!3m1!4b1!4m5!3m4!1s0x2e708c98be88820b:0xc33ea87b220cbdc1!8m2!3d-6.9962337!4d110.4335419",
     },
     {
       title: "resepsi",
       buttonTitle: "google maps",
-      locationText:
-        "Lorem ipsum dolor sit amet, consectus adispicing elit. Aliquas quis sodales metus",
+      building: "IFGF Semarang",
+      address:
+        "Jl. Kompol Maksum No.195, Peterongan, Kec. Semarang Sel., Kota Semarang, Jawa Tengah 50242",
       day: "minggu",
       month: "dec",
       date: "05",
       year: "2022",
-      time: "09:00 - 11:00",
+      time: "11:00 - Selesai",
+      targetLink:
+        "https://www.google.com/maps/place/IFGF+Semarang/@-6.9962337,110.4313532,17z/data=!3m1!4b1!4m5!3m4!1s0x2e708c98be88820b:0xc33ea87b220cbdc1!8m2!3d-6.9962337!4d110.4335419",
     },
   ];
 
