@@ -1,0 +1,26 @@
+@import "../../utilities/color-themes.scss";
+
+.cst-countdown-row {
+    width: fit-content;
+}
+
+.cst-countdown-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 5px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 1);        
+
+    h1{
+        font-weight: lighter;
+    }
+}
+
+.cst-countdown-col-out {
+    border: 1px solid $color-two !important;
+    color: rgba(255, 255, 255, 0.3);      
+    transition: 0.8s;  
+}
