@@ -5,6 +5,7 @@ import PlayButton from "../components/PlayButton";
 import Introduction from "./Introduction";
 import Family from "./Family";
 import Ceremony from "./Ceremony";
+import BibleQuote from "./BibleQuote";
 import LiveStreaming from "./LiveStreaming";
 import Reservation from "./Reservation";
 import Gallery from "./Gallery";
@@ -33,6 +34,7 @@ function Index() {
       <Introduction show={show} />
       <Family />
       <Ceremony />
+      <BibleQuote />
       <LiveStreaming />
       <Reservation />
       <Gallery />

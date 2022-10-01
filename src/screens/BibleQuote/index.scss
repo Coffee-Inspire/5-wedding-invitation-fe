@@ -1,0 +1,55 @@
+$PhotoFrame: "../../assets/photos/bible-frame.png"; 
+
+@media only screen and (max-width: 940px) {
+    .cst-bible-quote-container {  
+        padding: 30px 0 30px 0 !important;
+    }
+
+    .cst-bible-quote-frame {
+        width: 500px !important;
+        height: 500px !important;
+    }
+
+    .cst-bible-quote-content {
+        padding: 0 120px 0 120px  !important;
+
+        h5{
+            font-size: 9px;
+            line-height: 12px !important; 
+        }
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .cst-bible-quote-content {
+        padding: 0 250px  0 250px;        
+    }
+}
+
+.cst-bible-quote-container {    
+    padding: 150px 0 150px 0;
+    overflow: hidden;
+}
+
+.cst-bible-quote-frame {    
+    width: 1100px;
+    height: 1100px;
+
+    background-image: url($PhotoFrame);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+} 
+
+.cst-bible-quote-content {
+    text-align: center;
+    padding: 0 330px 0 330px;
+    letter-spacing: 2px;
+    font-weight: light;
+    font-style: italic;
+    
+    h5 {
+        line-height: 28px;        
+    }
+    
+}

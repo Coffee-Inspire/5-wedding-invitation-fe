@@ -34,8 +34,8 @@ function Family() {
               className="px-4 px-md-5 cst-family-list-wrap text-center"
             >
               <h5 className="cst-family-header">{groomFamily.title}</h5>
-              {groomFamily.nameList.map((item) => (
-                <p>{item}</p>
+              {groomFamily.nameList.map((item, i) => (
+                <p key={i}>{item}</p>
               ))}
             </Col>
             <Col
@@ -44,8 +44,8 @@ function Family() {
               className="px-4 px-md-5 cst-family-list-wrap text-center"
             >
               <h5 className="cst-family-header">{brideFamily.title}</h5>
-              {brideFamily.nameList.map((item) => (
-                <p>{item}</p>
+              {brideFamily.nameList.map((item, i) => (
+                <p key={i}>{item}</p>
               ))}
             </Col>
           </Row>
