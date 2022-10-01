@@ -40,7 +40,9 @@ function Cover(props) {
       <img className="cst-cover-photo" src={PhotoCover} alt="" />
       <Row className="m-0 cst-cover-content">
         <Col md={6} className="text-center">
-          <h1 className="cst-cover-bridegroom m-4">PETER {`&`} MEGA</h1>
+          <h1 className="cst-cover-bridegroom cst-font-theme m-4">
+            PETER {`&`} MEGA
+          </h1>
           {guest && (
             <>
               <h5 className="cst-cover-dear">Dear :</h5>

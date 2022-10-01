@@ -14,7 +14,7 @@ function Ceremony() {
       building: "IFGF Semarang",
       address:
         "Jl. Kompol Maksum No.195, Peterongan, Kec. Semarang Sel., Kota Semarang, Jawa Tengah 50242",
-      day: "minggu",
+      day: "sabtu",
       month: "dec",
       date: "03",
       year: "2022",
@@ -28,7 +28,7 @@ function Ceremony() {
       building: "IFGF Semarang",
       address:
         "Jl. Kompol Maksum No.195, Peterongan, Kec. Semarang Sel., Kota Semarang, Jawa Tengah 50242",
-      day: "minggu",
+      day: "sabtu",
       month: "dec",
       date: "05",
       year: "2022",
@@ -47,7 +47,7 @@ function Ceremony() {
   return (
     <div className="cst-cer-bg-photo">
       <Row className="m-0 d-flex justify-content-center align-items-center">
-        <Col xs={10} md={7} className="p-0 cst-cer-info-frame">
+        <Col xs={10} md={7} className="p-0 cst-content-info-frame">
           <div className="d-flex justify-content-center pt-5">
             <CountdownTimer />
           </div>

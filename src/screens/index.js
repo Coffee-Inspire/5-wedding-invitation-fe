@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 
 import PlayButton from "../components/PlayButton";
 import Introduction from "./Introduction";
+import Family from "./Family";
 import Ceremony from "./Ceremony";
 import LiveStreaming from "./LiveStreaming";
 import Reservation from "./Reservation";
@@ -27,14 +28,10 @@ function Index() {
 
   return (
     <Container fluid className="p-0">
-      <Cover
-        show={show}
-        // show={false}
-        setShow={setShow}
-        music={music}
-      />
+      <Cover show={show} setShow={setShow} music={music} />
       {!show && <PlayButton music={music} />}
       <Introduction show={show} />
+      <Family />
       <Ceremony />
       <LiveStreaming />
       <Reservation />
