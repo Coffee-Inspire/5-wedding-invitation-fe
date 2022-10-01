@@ -30,7 +30,7 @@ function Family() {
             </Col>
             <Col
               xs={6}
-              md={3}
+              md={4}
               className="px-4 px-md-5 cst-family-list-wrap text-center"
             >
               <h5 className="cst-family-header">{groomFamily.title}</h5>
@@ -40,7 +40,7 @@ function Family() {
             </Col>
             <Col
               xs={6}
-              md={3}
+              md={4}
               className="px-4 px-md-5 cst-family-list-wrap text-center"
             >
               <h5 className="cst-family-header">{brideFamily.title}</h5>
