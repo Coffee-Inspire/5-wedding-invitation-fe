@@ -18,7 +18,7 @@ function Ceremony() {
       month: "dec",
       date: "03",
       year: "2022",
-      time: "11:00 - Selesai",
+      time: "11:00 WIB - Selesai",
       targetLink:
         "https://www.google.com/maps/place/IFGF+Semarang/@-6.9962337,110.4313532,17z/data=!3m1!4b1!4m5!3m4!1s0x2e708c98be88820b:0xc33ea87b220cbdc1!8m2!3d-6.9962337!4d110.4335419",
     },
@@ -32,7 +32,7 @@ function Ceremony() {
       month: "dec",
       date: "05",
       year: "2022",
-      time: "11:00 - Selesai",
+      time: "11:00 WIB - Selesai",
       targetLink:
         "https://www.google.com/maps/place/IFGF+Semarang/@-6.9962337,110.4313532,17z/data=!3m1!4b1!4m5!3m4!1s0x2e708c98be88820b:0xc33ea87b220cbdc1!8m2!3d-6.9962337!4d110.4335419",
     },

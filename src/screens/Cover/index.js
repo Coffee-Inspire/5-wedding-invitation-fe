@@ -45,7 +45,7 @@ function Cover(props) {
           </h1>
           {guest && (
             <>
-              <h5 className="cst-cover-dear">Dear :</h5>
+              <h5 className="cst-cover-dear">Kepada :</h5>
               <h4 className="cst-cover-guest my-4">{guest}</h4>
             </>
           )}

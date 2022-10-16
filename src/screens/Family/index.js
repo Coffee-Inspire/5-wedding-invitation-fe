@@ -6,13 +6,16 @@ function Family() {
   const groomFamily = {
     title: "Keluarga Peter",
     nameList: [
-      "Ps. Kornelius Samuji, M.A., M.Th.",
-      "Dr. Florentina Wijayani Kusumawati, M.Th., M.Pd.",
+      // "Ps. Kornelius Samuji, M.A., M.Th.",
+      // "Dr. Florentina Wijayani Kusumawati, M.Th., M.Pd.",
+      "Kornelius Samuji",
+      "Florentina Wijayani Kusumawati",
     ],
   };
   const brideFamily = {
     title: "Keluarga Mega",
-    nameList: ["Ps. Johny Lumondo, S.Th.", "Ompin Lamtioma Desmeria"],
+    // nameList: ["Ps. Johny Lumondo, S.Th.", "Ompin Lamtioma Desmeria Sibarani"],
+    nameList: ["Johny Lumondo", "Ompin Lamtioma Desmeria Sibarani"],
   };
   return (
     <div className="cst-family-container">
