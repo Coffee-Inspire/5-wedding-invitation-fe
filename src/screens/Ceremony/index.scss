@@ -2,6 +2,18 @@
 
 $PhotoCeremony: "../../assets/photos/ceremony.jpg";
 
+@media (min-width: 800px) and (max-width: 1200px) {
+    .cst-cer-bg-photo{
+        background-position: center !important;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 799px) {
+    .cst-cer-bg-photo{
+        background-position: 63% 0% !important;
+    }
+}
+
 .cst-cer-bg-photo{
     background-image: url($PhotoCeremony);
     background-repeat: no-repeat;
