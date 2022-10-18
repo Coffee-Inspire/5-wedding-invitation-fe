@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { Row, Col } from "react-bootstrap";
 
@@ -17,9 +17,6 @@ function Gallery() {
   const closeModal = () => {
     setModalState(false);
   };
-  //   useEffect(() => {
-  //     console.log("idx now is", initIndex);
-  //   }, [initIndex]);
 
   return (
     <div>
