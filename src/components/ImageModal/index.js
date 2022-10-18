@@ -8,7 +8,7 @@ function ImageModal({ modalState, closeModal, initIndex, setInitIndex }) {
     <Modal
       centered
       interval={0}
-      size="lg"
+      // size="lg"
       show={modalState}
       onHide={closeModal}
       className="cst-modal"
