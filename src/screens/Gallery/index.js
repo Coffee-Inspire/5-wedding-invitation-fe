@@ -21,22 +21,26 @@ function Gallery() {
   const imageFocus = (indicator) => {
     let customClass = "";
     switch (indicator) {
+      case "one":
+        customClass += "cst-gallery-image-crop-right-medium";
+        break;
       case "five":
-        customClass += "cst-gallery-crop-right-half";
+        customClass += "cst-gallery-image-crop-right-large";
         break;
       case "nine":
-        customClass += "cst-gallery-crop-left";
+        customClass += "cst-gallery-image-crop-left-medium";
         break;
       case "ten":
-        customClass += "cst-gallery-crop-left-half";
+        customClass += "cst-gallery-image-crop-left-large";
         break;
       case "eleven":
-        customClass += "cst-gallery-crop-right-bottom";
+        customClass += "cst-gallery-image-crop-right-bottom-small";
         break;
       default:
         break;
     }
-    return (customClass = customClass + " " + "cst-gallery-photo");
+    // return (customClass = customClass + " " + "cst-gallery-photo");
+    return `${customClass} cst-gallery-photo`;
   };
 
   return (

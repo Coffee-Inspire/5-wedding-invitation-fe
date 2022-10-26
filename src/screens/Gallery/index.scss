@@ -47,18 +47,22 @@
     }
 }
 
-.cst-gallery-crop-right-bottom{
+.cst-gallery-image-crop-right-bottom-small{
     object-position: 100% 100%;
 }
 
-.cst-gallery-crop-left{
-    object-position: 14% 0;
+.cst-gallery-image-crop-left-medium{
+    object-position: 14% 50%;
 }
 
-.cst-gallery-crop-left-half {
-    object-position: 35% 0;
+.cst-gallery-image-crop-left-large {
+    object-position: 35% 50%;
 }
 
-.cst-gallery-crop-right-half {
-    object-position: 65% 0;
+.cst-gallery-image-crop-right-medium {
+    object-position: 80% 50%;
+}
+
+.cst-gallery-image-crop-right-large {
+    object-position: 65% 50%;
 }
