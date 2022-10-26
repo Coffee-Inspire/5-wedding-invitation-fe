@@ -13,46 +13,57 @@ import Eleven from "../assets/photos/galleries/11.jpg";
 const galleryImagesData = [
   {
     image: One,
+    indicate: "one",
     wide: 12,
   },
   {
     image: Two,
+    indicate: "two",
     wide: 6,
   },
   {
     image: Three,
+    indicate: "three",
     wide: 3,
   },
   {
     image: Four,
+    indicate: "four",
     wide: 3,
   },
   {
     image: Five,
+    indicate: "five",
     wide: 6,
   },
   {
     image: Six,
+    indicate: "six",
     wide: 6,
   },
   {
     image: Seven,
+    indicate: "seven",
     wide: 3,
   },
   {
     image: Eight,
+    indicate: "eight",
     wide: 3,
   },
   {
     image: Nine,
+    indicate: "nine",
     wide: 6,
   },
   {
     image: Ten,
+    indicate: "ten",
     wide: 5,
   },
   {
     image: Eleven,
+    indicate: "eleven",
     wide: 7,
   },
 ];

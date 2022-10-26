@@ -62,7 +62,7 @@ function Introduction(props) {
               <p className="m-0 cst-letter-spacing-medium">
                 Putri Pertama Dari :
               </p>
-              <p className="m-0 cst-letter-spacing-medium">{`Ps. Johny Lumondo dan Ompin Lamtioma Desmeria`}</p>
+              <p className="m-0 cst-letter-spacing-medium">{`Ps. Johny Lumondo dan Ompin Lamtioma Desmeria Sibarani`}</p>
             </div>
           </AnimationOnScroll>
         </Col>

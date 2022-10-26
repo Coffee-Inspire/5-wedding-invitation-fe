@@ -18,12 +18,33 @@ function Gallery() {
     setModalState(false);
   };
 
+  const imageFocus = (indicator) => {
+    let customClass = "";
+    switch (indicator) {
+      case "five":
+        customClass += "cst-gallery-crop-right-half";
+        break;
+      case "nine":
+        customClass += "cst-gallery-crop-left";
+        break;
+      case "ten":
+        customClass += "cst-gallery-crop-left-half";
+        break;
+      case "eleven":
+        customClass += "cst-gallery-crop-right-bottom";
+        break;
+      default:
+        break;
+    }
+    return (customClass = customClass + " " + "cst-gallery-photo");
+  };
+
   return (
     <div>
       <h1 className="my-5 cst-gallery-title">OUR GALLERY</h1>
       <Row className="mb-5 cst-gallery-canvas">
         {galleryImages.map((item, index) => (
-          <Col key={item.image} md={item.wide}>
+          <Col key={item.indicate} md={item.wide}>
             <AnimationOnScroll
               className="cst-gallery-header-frame"
               animateIn="animate__zoomIn"
@@ -31,7 +52,7 @@ function Gallery() {
             >
               <img
                 onClick={() => openModal(index)}
-                className="cst-gallery-photo"
+                className={imageFocus(item.indicate)}
                 src={item.image}
                 alt=""
               />
