@@ -35,7 +35,11 @@ function Introduction(props) {
               PETER JIMIE
             </h1>
             <p className="m-0 cst-letter-spacing-medium">Putra Kedua Dari :</p>
-            <p className="m-0 cst-letter-spacing-medium">{`Ps. Kornelius Samuji dan Marcelina Gertuida Kipuw (alm)`}</p>
+            <p className="m-0 cst-letter-spacing-medium">{`Ps. Kornelius Samuji dan Florentina Wijayani Kusumawati`}</p>
+            <p className="mt-3 mb-0 cst-letter-spacing-medium">
+              Putra Kedua Dari :
+            </p>
+            <p className="m-0 cst-letter-spacing-medium">{`Alm. Marcelina Gertuida Kipuw`}</p>
           </div>
         </Col>
       </Row>
