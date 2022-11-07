@@ -19,28 +19,17 @@ function Gallery() {
   };
 
   const imageFocus = (indicator) => {
-    let customClass = "";
-    switch (indicator) {
-      case "one":
-        customClass += "cst-gallery-image-crop-right-medium";
-        break;
-      case "five":
-        customClass += "cst-gallery-image-crop-right-large";
-        break;
-      case "nine":
-        customClass += "cst-gallery-image-crop-left-medium";
-        break;
-      case "ten":
-        customClass += "cst-gallery-image-crop-left-large";
-        break;
-      case "eleven":
-        customClass += "cst-gallery-image-crop-right-bottom-small";
-        break;
-      default:
-        break;
-    }
-    // return (customClass = customClass + " " + "cst-gallery-photo");
-    return `${customClass} cst-gallery-photo`;
+    const classMapper = {
+      one: "cst-gallery-image-crop-right-medium",
+      five: "cst-gallery-image-crop-right-large",
+      nine: "cst-gallery-image-crop-left-medium",
+      ten: "cst-gallery-image-crop-left-large",
+      eleven: "cst-gallery-image-crop-right-bottom-small",
+      default: "",
+    };
+    return `${
+      classMapper[indicator] || classMapper["default"]
+    } cst-gallery-photo`;
   };
 
   return (
