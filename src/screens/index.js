@@ -32,7 +32,7 @@ function Index() {
       <Cover show={show} setShow={setShow} music={music} />
       {!show && <PlayButton music={music} />}
       <Introduction show={show} />
-      <Family />
+      {/* <Family /> */}
       <Ceremony />
       <BibleQuote />
       <LiveStreaming />
