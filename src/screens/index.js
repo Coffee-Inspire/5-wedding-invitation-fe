@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 
 import PlayButton from "../components/PlayButton";
 import Introduction from "./Introduction";
-import Family from "./Family";
+// import Family from "./Family";
 import Ceremony from "./Ceremony";
 import BibleQuote from "./BibleQuote";
 import LiveStreaming from "./LiveStreaming";
