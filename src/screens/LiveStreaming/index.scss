@@ -13,3 +13,25 @@ $PhotoLive : "../../assets/photos/live.jpg";
     letter-spacing: 5px;
     margin-left: 5px;
 }
+
+.cst-live-pending {
+    color: rgba(255,255,255,1);
+    font-weight: lighter;
+    border: 1px solid rgba(255,255,255,0.4);
+    transition: 0.3s;
+    
+    .cst-live-pending-text-1{
+        letter-spacing: 4px;        
+    }
+    
+    .cst-live-pending-text-2{
+        letter-spacing: 2px;
+        font-size: 15px;
+    }
+
+    &:hover{
+        cursor: pointer;
+        color: rgba(255,255,255,0.5);
+        transition: 0.3s;
+    }
+}
