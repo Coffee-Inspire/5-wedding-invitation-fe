@@ -48,14 +48,14 @@ function LiveStreaming() {
               </Button>
             ) : (
               <div className="text-center mt-5">
-                <h4 className="p-3 d-flex flex-column cst-live-pending">
+                <h5 className="p-3 d-flex flex-column cst-live-pending">
                   <span className="cst-live-pending-text-1 mb-1">
-                    Stay Tuned
+                    LINK COMING SOON
                   </span>
-                  <span className="cst-live-pending-text-2">
+                  {/* <span className="cst-live-pending-text-2">
                     Link Coming Soon
-                  </span>
-                </h4>
+                  </span> */}
+                </h5>
               </div>
             )}
           </Col>
