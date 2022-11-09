@@ -9,7 +9,7 @@ import BibleQuote from "./BibleQuote";
 import LiveStreaming from "./LiveStreaming";
 import Reservation from "./Reservation";
 import Gallery from "./Gallery";
-import Gift from "./Gift";
+// import Gift from "./Gift";
 import Wishes from "./Wishes";
 import EndCover from "./EndCover";
 import Footer from "../components/Footer";
@@ -17,7 +17,7 @@ import Cover from "./Cover";
 
 import Song from "../assets/i-was-made-for-loving-you.mp3";
 // import check3Dec from "../helpers/changeData3Dec";
-import timing from "../helpers/timing";
+// import timing from "../helpers/timing";
 
 function Index() {
   const [show, setShow] = useState(true);
@@ -38,7 +38,7 @@ function Index() {
       <LiveStreaming />
       <Reservation />
       <Gallery />
-      {timing.afterCeremony() && <Gift />}
+      {/* {timing.afterCeremony() && <Gift />} */}
       <Wishes />
       <EndCover />
       <Footer />
