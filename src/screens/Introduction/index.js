@@ -30,16 +30,14 @@ function Introduction(props) {
           lg={7}
           className="d-flex justify-content-center align-items-center"
         >
-          <div className="cst-intro-name-card ">
+          <div className="cst-intro-name-card  ">
             <h1 className="py-3 cst-text-highlight-two cst-intro-text-spacing fw-normal">
-              PETER JIMIE
+              PETER JIMIE KUSUMA
             </h1>
-            <p className="m-0 cst-letter-spacing-medium">Putra Kedua Dari :</p>
-            <p className="m-0 cst-letter-spacing-medium">{`Ps. Kornelius Samuji dan Florentina Wijayani Kusumawati`}</p>
-            <p className="mt-3 mb-0 cst-letter-spacing-medium">
-              Putra Kedua Dari :
+            <p className="m-0 cst-letter-spacing-medium fw-bold">
+              Putra Kedua Dari
             </p>
-            <p className="m-0 cst-letter-spacing-medium">{`Alm. Marcelina Gertuida Kipuw`}</p>
+            <p className="m-0 cst-letter-spacing-medium">{`Bapak dan Ibu Kornelius Samuji`}</p>
           </div>
         </Col>
       </Row>
@@ -61,12 +59,13 @@ function Introduction(props) {
           >
             <div className="cst-intro-name-card">
               <h1 className="py-3 cst-text-highlight-two cst-intro-text-spacing fw-normal">
-                MEGA PISTIA
+                MEGA PISTIA LUMONDO
               </h1>
-              <p className="m-0 cst-letter-spacing-medium">
-                Putri Pertama Dari :
+              <p className="m-0 cst-letter-spacing-medium fw-bold">
+                Putri Pertama Dari
               </p>
-              <p className="m-0 cst-letter-spacing-medium">{`Ps. Johny Lumondo dan Ompin Lamtioma Desmeria Sibarani`}</p>
+              {/* <p className="m-0 cst-letter-spacing-medium">{`Ps. Johny Lumondo dan Ompin Lamtioma Desmeria Sibarani`}</p> */}
+              <p className="m-0 cst-letter-spacing-medium">{`Bapak dan Ibu Johny Lumondo`}</p>
             </div>
           </AnimationOnScroll>
         </Col>
