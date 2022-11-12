@@ -12,7 +12,7 @@ function Introduction(props) {
 
   const content = {
     groom: {
-      name: "PETER JIMMY KUSUMA",
+      name: "PETER JIMIE KUSUMA",
       head: "Putra Kedua Dari",
       parents: "Bapak dan Ibu Kornelius Samuji",
     },
