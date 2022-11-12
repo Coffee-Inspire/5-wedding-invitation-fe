@@ -10,6 +10,19 @@ import PhotoBride from "../../assets/photos/female.jpg";
 function Introduction(props) {
   const { show } = props;
 
+  const content = {
+    groom: {
+      name: "PETER JIMMY KUSUMA",
+      head: "Putra Kedua Dari",
+      parents: "Bapak dan Ibu Kornelius Samuji",
+    },
+    bridge: {
+      name: "MEGA PISTIA LUMONDO",
+      head: "Putri Pertama Dari",
+      parents: "Bapak dan Ibu Johny Lumondo",
+    },
+  };
+
   return (
     <>
       <Row
@@ -32,12 +45,15 @@ function Introduction(props) {
         >
           <div className="cst-intro-name-card  ">
             <h1 className="py-3 cst-text-highlight-two cst-intro-text-spacing fw-normal">
-              PETER JIMIE KUSUMA
+              {content.groom.name}
             </h1>
             <p className="m-0 cst-letter-spacing-medium fw-bold">
-              Putra Kedua Dari
+              {content.groom.head}
             </p>
-            <p className="m-0 cst-letter-spacing-medium">{`Bapak dan Ibu Kornelius Samuji`}</p>
+            <p className="m-0 cst-letter-spacing-medium">
+              {" "}
+              {content.groom.parents}
+            </p>
           </div>
         </Col>
       </Row>
@@ -59,13 +75,15 @@ function Introduction(props) {
           >
             <div className="cst-intro-name-card">
               <h1 className="py-3 cst-text-highlight-two cst-intro-text-spacing fw-normal">
-                MEGA PISTIA LUMONDO
+                {content.bridge.name}
               </h1>
               <p className="m-0 cst-letter-spacing-medium fw-bold">
-                Putri Pertama Dari
+                {content.bridge.head}
               </p>
-              {/* <p className="m-0 cst-letter-spacing-medium">{`Ps. Johny Lumondo dan Ompin Lamtioma Desmeria Sibarani`}</p> */}
-              <p className="m-0 cst-letter-spacing-medium">{`Bapak dan Ibu Johny Lumondo`}</p>
+              <p className="m-0 cst-letter-spacing-medium">
+                {" "}
+                {content.bridge.parents}
+              </p>
             </div>
           </AnimationOnScroll>
         </Col>
