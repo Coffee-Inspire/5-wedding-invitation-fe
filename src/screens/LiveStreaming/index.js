@@ -32,7 +32,7 @@ function LiveStreaming() {
           <Col xs={10} md={5}>
             <h3 className="cst-live-title">{screenContent.title}</h3>
             <p>{screenContent.text}</p>
-            {timing.afterCeremony() ? (
+            {timing.afterEarlyBird() ? (
               <Button
                 className="mt-5"
                 onClick={() => {
