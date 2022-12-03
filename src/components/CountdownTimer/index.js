@@ -38,14 +38,13 @@ function CountdownTimer() {
       const parseToSecond = deadline.diff(currentDate, "seconds");
       const timelapse = moment.duration(parseToSecond, "seconds");
       const data = timelapse._data;
-      if (data.seconds >= 0) {
-        setYearLeft(data.years);
-        setMonthLeft(data.months);
-        setDayLeft(data.days);
-        setHourLeft(data.hours);
-        setMinuteLeft(data.minutes);
-        setSecondLeft(data.seconds);
-      }
+      const max = (param) => Math.max(0, param);
+      setYearLeft(max(data.years));
+      setMonthLeft(max(data.months));
+      setDayLeft(max(data.days));
+      setHourLeft(max(data.hours));
+      setMinuteLeft(max(data.minutes));
+      setSecondLeft(max(data.seconds));
     }, 1000);
     return () => clearInterval(intervalId);
   }, [deadline]);
