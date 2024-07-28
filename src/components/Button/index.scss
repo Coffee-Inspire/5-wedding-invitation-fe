@@ -1,25 +1,25 @@
-$hover-transition: 0.2s;
+// $hover-transition: 0.2s;
 
-.cst-btn{
-    border: 1px solid #fff;
-    padding: 8px 55px 8px 55px;
-    border-radius: 10px;
-    transition: $hover-transition;
+// .cst-btn{
+//     border: 1px solid #fff;
+//     padding: 8px 55px 8px 55px;
+//     border-radius: 10px;
+//     transition:  0.2s;
 
-        .cst-btn-text{
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #fff;
-            transition: $hover-transition;
-        }
+//         .cst-btn-text{
+//             text-transform: uppercase;
+//             letter-spacing: 2px;
+//             color: #fff;
+//             transition:  0.2s;
+//         }
 
-        &:hover{
-            background-color: #fff;
-            transition: $hover-transition;
+//         &:hover{
+//             background-color: #fff;
+//             transition:  0.2s;
 
-            .cst-btn-text{
-                color: #000;
-                transition: $hover-transition;
-            }
-        }
-}
+//             .cst-btn-text{
+//                 color: #000;
+//                 transition:  0.2s;
+//             }
+//         }
+// }

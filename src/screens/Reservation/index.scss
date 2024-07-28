@@ -1,24 +1,24 @@
-$PhotoRsvp : "../../assets/photos/rsvp.jpg";
+// $PhotoRsvp : "../../assets/photos/rsvp.jpg";
 
-@media only screen and (max-width: 909px) {
-    .cst-reserve-bg-photo{
-        background-image: url($PhotoRsvp);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center !important;
-    }
-}
+// .cst-reserve-bg-photo{
+//     background-image: url($PhotoRsvp);
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: 0 -700px;
+//     height: 100vh;
+//     color: #fff;
+// }
 
-.cst-reserve-bg-photo{
-    background-image: url($PhotoRsvp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 -700px;
-    height: 100vh;
-    color: #fff;
-}
+// .cst-reserve-title{
+//     letter-spacing: 5px;
+//     margin-left: 5px;
+// }
 
-.cst-reserve-title{
-    letter-spacing: 5px;
-    margin-left: 5px;
-}
+// @media only screen and (max-width: 909px) {
+//     .cst-reserve-bg-photo{
+//         background-image: url($PhotoRsvp);
+//         background-repeat: no-repeat;
+//         background-size: cover;
+//         background-position: center;
+//     }
+// }

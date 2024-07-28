@@ -3,7 +3,7 @@ import moment from "moment";
 import { Row, Col } from "react-bootstrap";
 
 import timing from "../../helpers/timing";
-import "./index.scss";
+// import "./index.scss";
 
 function CountdownTimer() {
   const deadline = moment(timing.ceremonyDeadline);

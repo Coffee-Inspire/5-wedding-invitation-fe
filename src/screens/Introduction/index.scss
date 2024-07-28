@@ -1,75 +1,104 @@
-@media only screen and (max-width: 768px) {
-    .cst-intro-padding-bottom{
-        padding-bottom: 50px !important;
-    }
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap");
 
-    .cst-intro-photo-one{
-        height: 100% !important;
-        object-position: center right;
-    }
-
-    .cst-intro-photo-two{
-        // height: 100% !important;
-        object-position: -95px -150px;
-    }
-
-    .cst-intro-and{
-        display: block !important;
-    }
-  }
-
-
-@media only screen and (max-width: 450px) {
-    .cst-intro-photo-one{
-        height: 100% !important;
-        object-position: center right;
-    }
-
-    .cst-intro-photo-two{
-        // height: 100% !important;
-        object-position: -60px 0;
-    }
-  }
-
-.cst-intro-and{
-    text-align: center;
-    display: none;
-}
-
-.cst-intro-row{
-    height: 100vh;
-    overflow: hidden;
-}
-
-.cst-intro-photo-one{
-    width: 580px;
-    height: 580px;    
+.cst-intro-photo-1{
+    width: 100%;    
+    height: 100vh !important;
     object-fit: cover;
-
-    // Image Position Scaling Handle
-    // object-position: 0 -50px;
-    // filter: grayscale(80%);
 }
 
-.cst-intro-photo-two{
-    width: 580px;
-    height: 580px;    
-    object-fit: cover;
-
-    // Image Position Scaling Handle
-    // object-position: 0 -50px;
-    // filter: grayscale(80%);
+.cst-font-1{
+    font-family: 'Playwrite BE VLG', cursive;
 }
 
-.cst-intro-name-card{
-    width: 85%;
-    text-align: center;
-
-    h1{
-        letter-spacing: 8px;
-    }
+.cst-font-2{
+    font-family: 'Poiret One', 'Segoe UI';
 }
 
-.cst-letter-spacing-medium {
-    letter-spacing: 3px;
-}
+
+
+
+
+
+
+
+
+
+// @media only screen and (max-width: 768px) {
+//     .cst-intro-padding-bottom{
+//         padding-bottom: 50px !important;
+//     }
+
+//     .cst-intro-photo-one{
+//         height: 100% !important;
+//         // object-position: center right;        
+//     }
+
+//     .cst-intro-photo-two{
+//         // height: 100% !important;
+//         object-position: -95px -150px;
+//     }
+
+//     .cst-intro-and{
+//         display: block !important;
+//     }
+//   }
+
+
+// @media only screen and (max-width: 450px) {
+//     .cst-intro-photo-one{
+//         height: 100% !important;
+//         // object-position: center right;
+//     }
+
+//     .cst-intro-photo-two{
+//         // height: 100% !important;
+//         object-position: -60px 0;
+//     }
+//   }
+
+// .cst-intro-and{
+//     text-align: center;
+//     display: none;
+// }
+
+// .cst-intro-row{
+//     height: 100vh;
+//     overflow: hidden;
+// }
+
+// .cst-intro-photo-one{
+//     // width: 580px;
+//     // height: 580px;    
+//     // object-fit: cover;
+
+//     width: 100%;    
+//     height: 100vh !important;
+//     object-fit: cover;
+
+//     // Image Position Scaling Handle
+//     // object-position: 0 -50px;
+//     // filter: grayscale(80%);
+// }
+
+// .cst-intro-photo-two{
+//     width: 580px;
+//     height: 580px;    
+//     object-fit: cover;
+
+//     // Image Position Scaling Handle
+//     // object-position: 0 -50px;
+//     // filter: grayscale(80%);
+// }
+
+// .cst-intro-name-card{
+//     width: 85%;
+//     text-align: center;
+
+//     h1{
+//         letter-spacing: 8px;
+//     }
+// }
+
+// .cst-letter-spacing-medium {
+//     letter-spacing: 3px;
+// }
