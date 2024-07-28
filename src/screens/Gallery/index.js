@@ -34,13 +34,27 @@ function Gallery() {
 
   return (
     <div>
-      <h1 className="my-5 cst-gallery-title">OUR GALLERY</h1>
+      {/* <h1 className="my-5 cst-gallery-title">OUR GALLERY</h1> */}
+      <AnimationOnScroll animateIn="animate__slideInUp" animateOnce>
+        <h3
+          className="pt-5 pb-3 text-center fw-bold"
+          style={{ letterSpacing: "5px" }}
+        >
+          OUR GALLERY
+        </h3>
+      </AnimationOnScroll>
       <Row className="mb-5 cst-gallery-canvas">
         {galleryImages.map((item, index) => (
-          <Col key={item.indicate} md={item.wide}>
+          <Col
+            key={item.indicate}
+            xs={item.xs}
+            md={item.md}
+            // style={{ border: "1px solid red" }}
+            className="px-1"
+          >
             <AnimationOnScroll
-              className="cst-gallery-header-frame"
-              animateIn="animate__zoomIn"
+              className="cst-gallery-header-frame mb-2"
+              animateIn="animate__slideInLeft"
               animateOnce
             >
               <img

@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import "utilities/color-themes.scss";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cst-content-info-frame{
+  color: #fff;
+  background-color: rgba($color-4, 0.6);
+  border-radius: 45px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.cst-font-theme {
+  font-family: 'Poiret One', 'Segoe UI';
+}
+
+.cst-text-thin {
+  font-weight: lighter;
+  opacity: 0.8;
+}
+
+.cst-text-highlight-one{
+  color: $color-1;
+  font-size: 50px;
+}
+
+.cst-text-highlight-two{
+    color: $color-2;
+}
+
+.cst-text-darken{
+  color: darken(#fff, 30%);
+}
+
+option{
+  color: #000;
+}
+
+.cst-form{
+  color: #fff !important;
+  background-color: rgba(#fff, 0) !important;
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid #fff !important;
+  padding: 12px 5px 12px 5px !important;
+}
+
+.cst-select{
+  color: #fff !important;
+  background-color: rgba(#fff, 0) !important;
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid #fff !important;
+  cursor: pointer;
+  fill: red !important;
+  padding: 12px 5px 12px 5px !important;
+}
+
+.cst-textarea{
+  color: #fff !important;
+  background-color: rgba(#fff, 0) !important;
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid #fff !important;
+  padding: 0 5px 0 5px !important;
+}
+
