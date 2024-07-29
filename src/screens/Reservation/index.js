@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col, Form } from "react-bootstrap";
 import axios from "axios";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import toCapitalize from "../../helpers/toCapitalize";
 import "./index.scss";
 
@@ -10,6 +10,7 @@ import Button from "../../components/Button";
 import { takeIcon } from "../../data/iconMapper";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { apis } from "../../api/apis";
+import Select, { StylesConfig } from "react-select";
 
 function Reservation() {
   const activityData = {
@@ -18,21 +19,56 @@ function Reservation() {
     buttonText: "SEND",
   };
 
-  const { register, handleSubmit, reset } = useForm();
+  const optionGuestCount = [
+    { value: 1, label: "1" },
+    { value: 2, label: "2" },
+    { value: 3, label: "3" },
+  ];
+
+  const optionGuestStatus = [
+    { value: "Hadir", label: "Hadir" },
+    { value: "Tidak Dapat Hadir", label: "Tidak Dapat Hadir" },
+  ];
+
+  const colourStyles = {
+    control: (style) => {
+      return {
+        ...style,
+        borderColor: "#54442bff",
+      };
+    },
+  };
+
+  const { register, control, handleSubmit, reset } = useForm();
+  const [isFetching, SetIsFetching] = useState(true);
+  const [pingStatus, setPingStatus] = useState(500);
   const onSubmit = (data) => postData(data);
 
   const postData = (data) => {
+    console.log(data);
     data = {
       ...data,
       guestName: toCapitalize(data.guestName),
+      guestCount: data.guestCount.value,
+      guestStatus: data.guestStatus.value,
     };
+    console.log(data);
     // axios.post(process.env.REACT_APP_RSVP_API, data).then((res) => {});
-    axios.post(apis.rsvp.create, data).then((res) => {});
+    // axios.post(apis.rsvp.create, data).then((res) => {});
     reset();
   };
 
-  // console.log(apis.ping.get);
-  axios.get(apis.ping.get).then((res) => console.log(res));
+  const ping = () => {
+    SetIsFetching(true);
+    axios
+      .get(apis.ping.get)
+      .then((res) => setPingStatus(res.status))
+      .finally(() => SetIsFetching(false));
+  };
+
+  useEffect(() => {
+    ping();
+  }, []);
 
   return (
     <div className="text-center my-4 py-4">
@@ -58,25 +94,44 @@ function Reservation() {
               {...register("guestName", { required: true })}
               className="shadow-none my-3"
               placeholder="Name"
+              disabled={pingStatus !== 200 || isFetching}
             />
-            <Form.Select
-              {...register("guestCount", { required: true })}
-              className="shadow-none my-3"
-              placeholder="Name"
+            <Controller
+              name="guestCount"
+              control={control}
+              render={({ field }) => (
+                <Select
+                  {...field}
+                  className="my-3 text-start"
+                  placeholder="Number of person"
+                  isDisabled={pingStatus !== 200 || isFetching}
+                  isLoading={pingStatus !== 200 || isFetching}
+                  options={optionGuestCount}
+                  styles={colourStyles}
+                />
+              )}
+            />
+            <Controller
+              name="guestStatus"
+              control={control}
+              render={({ field }) => (
+                <Select
+                  {...field}
+                  className="my-3 text-start"
+                  placeholder="Attendance status"
+                  isDisabled={pingStatus !== 200 || isFetching}
+                  isLoading={pingStatus !== 200 || isFetching}
+                  options={optionGuestStatus}
+                  styles={colourStyles}
+                />
+              )}
+            />
+            <Button
+              className="mt-5 w-100"
+              disabled={pingStatus !== 200 || isFetching}
             >
-              <option disabled>Number of person</option>
-              <option>1</option>
-              <option>2</option>
-            </Form.Select>
-            <Form.Select
-              {...register("guestStatus", { required: true })}
-              className="shadow-none my-3"
-            >
-              <option disabled>Attendance status</option>
-              <option>Hadir</option>
-              <option>Tidak Dapat Hadir</option>
-            </Form.Select>
-            <Button className="mt-5 w-100">{activityData.buttonText}</Button>
+              {activityData.buttonText}
+            </Button>
           </Form>
         </Col>
       </Row>

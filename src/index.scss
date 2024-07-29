@@ -26,17 +26,13 @@ body {
 .form-control{
   border: 1px solid $color-2 !important;
 }
-
-.form-select{
-  border: 1px solid $color-2 !important;
-}
 // --
 
 
 .cst-qr{
   --s: 50px; /* corner size */  
-  padding: 6px; /* gap */
-  border: 5px solid $color-3; /* thickness and color */
+  padding: 5px; /* gap */
+  border: 5px solid $color-4; /* thickness and color */
   -webkit-mask:
     conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
     0 0/calc(100% - var(--s)) calc(100% - var(--s)),
