@@ -13,8 +13,9 @@ import Reservation from "./Reservation";
 import Gallery from "./Gallery";
 import GiftBackup from "./GiftBackup";
 import Gift from "./Gift";
-import Wishes from "./Wishes";
-import EndCover from "./EndCover";
+import Wish from "./Wish";
+import WishesBackup from "./WishesBackup";
+import Closing from "./Closing";
 import Footer from "../components/Footer";
 import Cover from "./Cover";
 
@@ -47,10 +48,10 @@ function Index() {
       <Reservation />
 
       {/* {timing.afterCeremony() && <Gift />} */}
-
-      {/* <Wishes /> */}
-      {/* <EndCover /> */}
-      {/* <Footer /> */}
+      {/* <WishesBackup /> */}
+      <Wish />
+      <Closing />
+      <Footer />
     </Container>
   );
 }

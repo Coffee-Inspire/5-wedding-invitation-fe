@@ -3,7 +3,7 @@ import { Row, Col, Form } from "react-bootstrap";
 import axios from "axios";
 import { useForm, Controller } from "react-hook-form";
 import toCapitalize from "../../helpers/toCapitalize";
-import "./index.scss";
+// import "./index.scss";
 
 import BannerOverlay from "../../components/BannerOverlay";
 import Button from "../../components/Button";
@@ -14,9 +14,9 @@ import Select, { StylesConfig } from "react-select";
 
 function Reservation() {
   const activityData = {
-    title: "RESERVATION",
+    title: "RSVP",
     text: "Please confirm your attendance",
-    buttonText: "SEND",
+    buttonText: "SEND RSVP",
   };
 
   const optionGuestCount = [
@@ -88,7 +88,7 @@ function Reservation() {
       <h5 className="text-center py-3">{activityData.text}</h5>
 
       <Row className="d-flex justify-content-center">
-        <Col xs={12} md={6}>
+        <Col xs={11} md={6}>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Control
               {...register("guestName", { required: true })}
@@ -127,7 +127,7 @@ function Reservation() {
               )}
             />
             <Button
-              className="mt-5 w-100"
+              className="mt-5 w-50"
               disabled={pingStatus !== 200 || isFetching}
             >
               {activityData.buttonText}
