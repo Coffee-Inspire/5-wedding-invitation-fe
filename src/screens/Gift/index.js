@@ -34,7 +34,7 @@ function Gift() {
           <h5 className="text-center py-3">{activityData.text}</h5>
         </Col>
       </Row>
-      <div className="pt-3">
+      <div className="pt-3 pb-5">
         <img className="cst-qr" src={QR} alt="" />
       </div>
 
