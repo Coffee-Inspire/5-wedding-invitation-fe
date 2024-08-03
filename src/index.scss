@@ -318,7 +318,7 @@ body {
     // }
 
     .cst-intro-photo-container{
-      height: 70vh; // TODO: better using scale of em for parent dynamic relative purpose (element = parent * 0.7).
+      // height: 70vh; // TODO: better using scale of em for parent dynamic relative purpose (element = parent * 0.7).
     }
 
     // .cst-intro-photo{
@@ -331,8 +331,8 @@ body {
     // }
 
      .cst-intro-photo{
-      transform: scale(1.7) translate(4%); // After zoom, control horizontal position
-      object-position: 0% -300%; // Control vertical position
+      transform: scale(1.7) translate(-9%, 16%); // After zoom, control horizontal and vertical position
+      // object-position: 0% -300%; // Control vertical position      
     }
 
     .cst-intro-div{            
@@ -347,12 +347,7 @@ body {
       font-size: 3.5em;      
     }
 
-  }
-
- 
-
-
-
+  } 
 
 // @media only screen and (max-width: 768px) {
 //     .cst-intro-padding-bottom{

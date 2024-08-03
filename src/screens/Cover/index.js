@@ -39,9 +39,9 @@ function Cover(props) {
       <img className="cst-cover-photo" src={PhotoCover} alt="" />
       <Row className="m-0 cst-cover-content">
         <Col xs={12} md={8} className="px-0 text-center">
-          <h2 className="cst-cover-bridegroom cst-font-theme cst-color- m-4">
-            DIANA {`&`} ROBERTO
-          </h2>
+          <h1 className="cst-cover-bridegroom cst-font-theme cst-color- m-4">
+            RISAL {`&`} GABY
+          </h1>
           {guest && (
             <>
               <h5 className="cst-cover-dear">Kepada :</h5>
