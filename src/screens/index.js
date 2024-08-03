@@ -26,7 +26,7 @@ import DressCode from "./DressCode";
 
 function Index() {
   const [show, setShow] = useState(true);
-  // const [music] = useState(new Audio(Song));
+  const [music] = useState(new Audio(Song));
 
   useEffect(() => {
     setShow(true);
@@ -34,11 +34,11 @@ function Index() {
 
   return (
     <Container fluid className="">
-      {/* <Cover show={show} setShow={setShow} music={music} /> */}
+      <Cover show={show} setShow={setShow} music={music} />
       {/* {!show && <PlayButton music={music} />} */}
       <Introduction show={show} />
       {/* <FamilyBackup /> */}
-      <Ceremony />
+      <Ceremony music={music} />
       <DressCode />
       {/* <BibleQuote /> */}
       {/* <LiveStreaming /> */}

@@ -76,6 +76,10 @@ body {
   background-color: $color-5;
  }
 
+// .cst-intro-container{
+//   height: 100vh;
+// }
+
 .cst-intro-photo-container{
   width: 100%;    
   height: 100vh;
@@ -168,9 +172,24 @@ body {
 }
 
 .cst-btn-2{
-  // background-color: $color-1 !important;  
+  background-color: $color-1 !important;  
   color: #fff !important;
   border: 1px solid #fff !important;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  transition:  0.2s;
+  
+      &:hover{
+          background-color: $color-1 !important;
+          border: 1px solid $color-1 !important;
+          transition:  0.2s;         
+      }
+}
+
+.cst-btn-3{  
+  background-color: rgba(0, 0, 0, 0) !important;  
+  color: $color-1 !important ;
+  border: 1px solid $color-1 !important;
   border-radius: 10px;
   letter-spacing: 2px;
   transition:  0.2s;
@@ -294,8 +313,12 @@ body {
       letter-spacing: 5px;
     }
 
+    // .cst-intro-container{
+    //   height: 80vh;
+    // }
+
     .cst-intro-photo-container{
-      height: 70vh;          
+      height: 70vh; // TODO: better using scale of em for parent dynamic relative purpose (element = parent * 0.7).
     }
 
     // .cst-intro-photo{

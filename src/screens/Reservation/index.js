@@ -40,12 +40,11 @@ function Reservation() {
   };
 
   const { register, control, handleSubmit, reset } = useForm();
-  const [isFetching, SetIsFetching] = useState(true);
+  const [isFetching, setIsFetching] = useState(true);
   const [pingStatus, setPingStatus] = useState(500);
   const onSubmit = (data) => postData(data);
 
   const postData = (data) => {
-    console.log(data);
     data = {
       ...data,
       guestName: toCapitalize(data.guestName),
@@ -53,21 +52,27 @@ function Reservation() {
       guestStatus: data.guestStatus.value,
     };
     console.log(data);
-    // axios.post(process.env.REACT_APP_RSVP_API, data).then((res) => {});
-    // axios.post(apis.rsvp.create, data).then((res) => {});
+    setIsFetching(true);
+    axios
+      .post(apis.rsvp.create, data)
+      .then(() => {})
+      .finally(() => setIsFetching(false));
     reset();
   };
 
   const ping = () => {
-    SetIsFetching(true);
+    setIsFetching(true);
     axios
       .get(apis.ping.get)
       .then((res) => setPingStatus(res.status))
-      .finally(() => SetIsFetching(false));
+      .finally(() => setIsFetching(false));
   };
 
   useEffect(() => {
     ping();
+
+    axios.get(apis.rsvp.get).then((res) => console.log(res));
+    // .finally(() => setIsFetching(false));
   }, []);
 
   return (

@@ -31,25 +31,26 @@ function Cover(props) {
   return (
     <div
       id="cover"
-      // className={(show ? 'd-block' : 'd-none') + ' cst-cover-container'}
       className={
         (show ? "d-block" : "animate__animated animate__fadeOut") +
-        " cst-cover-container bg-secondary"
+        " cst-cover-container"
       }
     >
       <img className="cst-cover-photo" src={PhotoCover} alt="" />
       <Row className="m-0 cst-cover-content">
-        <Col md={6} className="text-center">
-          <h1 className="cst-cover-bridegroom cst-font-theme m-4">
-            PETER {`&`} MEGA
-          </h1>
+        <Col xs={12} md={8} className="px-0 text-center">
+          <h2 className="cst-cover-bridegroom cst-font-theme cst-color- m-4">
+            DIANA {`&`} ROBERTO
+          </h2>
           {guest && (
             <>
               <h5 className="cst-cover-dear">Kepada :</h5>
               <h4 className="cst-cover-guest my-4">{guest}</h4>
             </>
           )}
-          <Button onClick={() => closeCover()}>Buka Undangan</Button>
+          <Button className="cst-btn-3 px-4 py-2" onClick={() => closeCover()}>
+            Buka Undangan
+          </Button>
         </Col>
       </Row>
     </div>
