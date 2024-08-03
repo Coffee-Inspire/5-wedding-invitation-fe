@@ -40,9 +40,9 @@ function Introduction(props) {
           <div className="cst-intro-div text-white py-4">
             <h1 className="cst-font-3 cst-intro-title">We're Married</h1>
             <div className="d-flex justify-content-center">
-              <h1 className="cst-font-4 cst-intro-text">DIANA</h1>
+              <h1 className="cst-font-4 cst-intro-text">RISAL</h1>
               <h1 className="cst-font-4 cst-intro-text cst-color-1 px-1">&</h1>
-              <h1 className="cst-font-4 cst-intro-text">ROBERTO</h1>
+              <h1 className="cst-font-4 cst-intro-text">GABY</h1>
             </div>
           </div>
         </Col>

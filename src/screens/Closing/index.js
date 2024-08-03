@@ -4,7 +4,7 @@ import { Row, Col } from "react-bootstrap";
 function Closing() {
   const activityData = {
     title: "With Love and Joy",
-    signature: "Diana y Roberto",
+    signature: "Risal y Gaby",
     text: "Your presence means the world to us. We look forward to celebrating this joyful occasion with you!",
   };
 
