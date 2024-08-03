@@ -6,8 +6,10 @@ import CountdownTimer from "../../components/CountdownTimer";
 import ActivityInfoCard from "../../components/ActivityInfoCard";
 import { takeIcon } from "../../data/iconMapper";
 import timing from "../../helpers/timing";
+import MusicBox from "../../components/MusicBox";
 
-function Ceremony() {
+function Ceremony(props) {
+  const { music } = props;
   const activityData = [
     {
       title: "CEREMONY",
@@ -40,6 +42,9 @@ function Ceremony() {
   return (
     <>
       <Row className="d-flex justify-content-center align-items-center py-4">
+        <Col xs={12} className="text-center">
+          <MusicBox music={music} />
+        </Col>
         <Col xs={12} className="text-center py-4">
           <h1 className="cst-font-1 cst-color-2">You're invited!</h1>
         </Col>

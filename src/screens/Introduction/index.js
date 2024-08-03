@@ -27,7 +27,7 @@ function Introduction(props) {
 
   return (
     <>
-      <Row className="vh-100">
+      <Row>
         <Col xs={12} className="p-0 position-relative">
           <div className="cst-intro-photo-container position-relative">
             <img
