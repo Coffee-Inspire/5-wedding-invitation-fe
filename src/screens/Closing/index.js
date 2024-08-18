@@ -5,7 +5,7 @@ function Closing() {
   const activityData = {
     title: "With Love and Joy",
     signature: "Risal y Gaby",
-    text: "Your presence means the world to us. We look forward to celebrating this joyful occasion with you!",
+    text: "We would delighted to have you with us to share and celebrate this special day",
   };
 
   return (
@@ -18,9 +18,6 @@ function Closing() {
             <span className="cst-font-3">and </span>
             <span className="cst-font-3 cst-color-1">Joy </span>
           </h1>
-          {/* <h1 className="cst-font-3 cst-color-2 cst-closing-title">
-            {activityData.title}
-          </h1> */}
         </Col>
         <Col xs={10} md={12} className="pb-4">
           <h1 className="cst-color-2 cst-font-5 cst-closing-signature">

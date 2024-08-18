@@ -22,14 +22,13 @@ function Ceremony(props) {
         "https://www.google.com/maps/place/IFGF+Semarang/@-6.9962337,110.4313532,17z/data=!3m1!4b1!4m5!3m4!1s0x2e708c98be88820b:0xc33ea87b220cbdc1!8m2!3d-6.9962337!4d110.4335419",
     },
     {
-      title: "CELEBRATION",
+      title: "HOLY MATRIMONY",
       logo: takeIcon("wine"),
-      date: "3 DEC",
-      time: "18:00 PM",
-      location1: "Lorem ipsum dolor sit amet consectetur 188,",
-      location2: "adipiscing elit tempor incididunt",
-      targetLink:
-        "https://www.google.com/maps/place/IFGF+Semarang/@-6.9962337,110.4313532,17z/data=!3m1!4b1!4m5!3m4!1s0x2e708c98be88820b:0xc33ea87b220cbdc1!8m2!3d-6.9962337!4d110.4335419",
+      date: "7 DEC 2024",
+      time: "11:00 AM (WIB)",
+      location1: "IFGF Semarang",
+      location2: "Kompol Maksum 195, Semarang",
+      targetLink: "https://maps.app.goo.gl/V5tXgLtvYyYbPPnU9",
     },
   ];
 
@@ -42,21 +41,21 @@ function Ceremony(props) {
   return (
     <>
       <Row className="d-flex justify-content-center align-items-center py-4">
-        <Col xs={12} className="text-center">
+        <Col xs={12} className="text-center py-4">
           <MusicBox music={music} />
         </Col>
-        <Col xs={12} className="text-center py-4">
+        {/* <Col xs={12} className="text-center py-4">
           <h1 className="cst-font-1 cst-color-2">You're invited!</h1>
         </Col>
         <Col xs={8} md={6} className="text-center py-4">
           <h5 className="">We want you to be a part of this special moment.</h5>
-        </Col>
+        </Col> */}
         <Col xs={10} md={7} className="p-0">
           <div className="d-flex justify-content-center py-4">
             <CountdownTimer />
           </div>
           {/* {contentDisplay()} */}
-          <ActivityInfoCard props={activityData[0]} />
+          {/* <ActivityInfoCard props={activityData[0]} /> */}
           <ActivityInfoCard props={activityData[1]} />
         </Col>
       </Row>

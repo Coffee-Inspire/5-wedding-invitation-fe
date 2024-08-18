@@ -1,21 +1,20 @@
 @import "utilities/color-themes.scss";
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap"); // Google Font: Playwrite BE VLG
-@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap'); // Google Font: Salsa
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Salsa&display=swap'); // Google Font: Alata
+@import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap"); // Google Font: Salsa
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Salsa&display=swap"); // Google Font: Alata
 @font-face {
   src: url("./assets/fonts/Dearlove.ttf") format("truetype");
-  font-family: 'Dearlove';
+  font-family: "Dearlove";
 } // Local Font: Dearlove
 @font-face {
   src: url("./assets/fonts/american-signature.regular.ttf") format("truetype");
-  font-family: 'AmericanSignatureRegular';
+  font-family: "AmericanSignatureRegular";
 } // Local Font: AmericanSignatureRegular
 
 // -- Override
-*{
-  font-family: 'Alata', 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;  
+* {
+  font-family: "Alata", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 body {
@@ -24,112 +23,112 @@ body {
   //   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   //   sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;  
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.form-control{
+.form-control {
   border: 1px solid $color-2 !important;
 }
 // --
 
-
-.cst-qr{
-  --s: 50px; /* corner size */  
+.cst-qr {
+  --s: 50px; /* corner size */
   padding: 5px; /* gap */
   border: 5px solid $color-4; /* thickness and color */
-  -webkit-mask:
-    conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
-    0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+  -webkit-mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
+      calc(100% - var(--s)) calc(100% - var(--s)),
     linear-gradient(#000 0 0) content-box;
-    height: 160px;
-    object-fit: cover;
+  height: 160px;
+  object-fit: cover;
 }
 
-.cst-color-1{
+.cst-color-1 {
   color: $color-1;
 }
-.cst-color-2{
+.cst-color-2 {
   color: $color-2;
 }
-.cst-color-3{
+.cst-color-3 {
   color: $color-3;
 }
-.cst-color-4{
+.cst-color-4 {
   color: $color-4;
 }
-.cst-color-5{
+.cst-color-5 {
   color: $color-5;
 }
-.cst-bg-1{
- background-color: $color-1;
+.cst-bg-1 {
+  background-color: $color-1;
 }
-.cst-bg-2{
- background-color: $color-2;
+.cst-bg-2 {
+  background-color: $color-2;
 }
-.cst-bg-3{
- background-color: $color-3;
+.cst-bg-3 {
+  background-color: $color-3;
 }
-.cst-bg-4{
- background-color: $color-4;
+.cst-bg-4 {
+  background-color: $color-4;
 }
-.cst-bg-5{
+.cst-bg-5 {
   background-color: $color-5;
- }
+}
+.cst-bg-6 {
+  background-color: $color-6;
+}
 
 // .cst-intro-container{
 //   height: 100vh;
 // }
 
-.cst-intro-photo-container{
-  width: 100%;    
+.cst-intro-photo-container {
+  width: 100%;
   height: 100vh;
-  overflow: hidden;  
+  overflow: hidden;
 }
 
-.cst-intro-photo{
-    width: 100%;    
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.2) translate(5%); // After zoom, control horizontal position
-    object-position: 0% 20%; // Control vertical position
+.cst-intro-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2) translate(5%); // After zoom, control horizontal position
+  object-position: 0% 20%; // Control vertical position
 }
 
-.cst-intro-div{
-  position: absolute;    
-  text-align: center;  
-  bottom: 8em;    
-  left: 0; 
+.cst-intro-div {
+  position: absolute;
+  text-align: center;
+  bottom: 8em;
+  left: 0;
   right: 0;
-
 }
 
-.cst-intro-title{
+.cst-intro-title {
   font-size: 9em;
 }
 
-.cst-intro-text{
+.cst-intro-text {
   font-size: 2.5em;
   letter-spacing: 10px;
 }
 
-.cst-font-1{
-    font-family: 'Playwrite BE VLG', cursive;
+.cst-font-1 {
+  font-family: "Playwrite BE VLG", cursive;
 }
 
-.cst-font-2{
-    font-family: 'Poiret One', 'Segoe UI';
+.cst-font-2 {
+  font-family: "Poiret One", "Segoe UI";
 }
 
-.cst-font-3{
-  font-family: 'Dearlove';
+.cst-font-3 {
+  font-family: "Dearlove";
 }
 
-.cst-font-4{
-  font-family: 'Alata';
+.cst-font-4 {
+  font-family: "Alata";
 }
 
-.cst-font-5{
-  font-family: 'AmericanSignatureRegular';
+.cst-font-5 {
+  font-family: "AmericanSignatureRegular";
 }
 
 .cst-countdown-row {
@@ -144,210 +143,278 @@ body {
   line-height: 5px;
   border-radius: 10px;
   // border: 1px solid rgba(0, 0, 0, 0.5);
-  color: rgb(255, 255, 255);  
+  color: rgb(255, 255, 255);
   background-color: $color-2;
 
-  h1{
-      font-weight: lighter;
+  h1 {
+    font-weight: lighter;
   }
 }
 
 .cst-countdown-col-out {
   border: 1px solid $color-2 !important;
-  color: rgba(0, 0, 0, 0.3);      
-  transition: 0.8s;  
+  color: rgba(0, 0, 0, 0.3);
+  transition: 0.8s;
 }
 
-.cst-btn-1{
+.cst-btn-1 {
   background-color: $color-2 !important;
   color: #fff !important;
   border-radius: 10px;
   letter-spacing: 2px;
-  transition:  0.2s;
-  
-      &:hover{
-          background-color: $color-3 !important;
-          transition:  0.2s;         
-      }
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $color-3 !important;
+    transition: 0.2s;
+  }
 }
 
-.cst-btn-2{
-  background-color: $color-1 !important;  
+.cst-btn-2 {
+  background-color: $color-1 !important;
   color: #fff !important;
   border: 1px solid #fff !important;
   border-radius: 10px;
   letter-spacing: 2px;
-  transition:  0.2s;
-  
-      &:hover{
-          background-color: $color-1 !important;
-          border: 1px solid $color-1 !important;
-          transition:  0.2s;         
-      }
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $color-1 !important;
+    border: 1px solid $color-1 !important;
+    transition: 0.2s;
+  }
 }
 
-.cst-btn-3{  
-  background-color: rgba(0, 0, 0, 0) !important;  
+.cst-btn-3 {
+  background-color: rgba(0, 0, 0, 0) !important;
   color: $color-1 !important ;
   border: 1px solid $color-1 !important;
   border-radius: 10px;
   letter-spacing: 2px;
-  transition:  0.2s;
-  
-      &:hover{
-          background-color: $color-1 !important;
-          border: 1px solid $color-1 !important;
-          transition:  0.2s;         
-      }
-}
+  transition: 0.2s;
 
-.cst-gallery-header-frame{
-    overflow: hidden;
-    height: 450px;    
-}
-
-.cst-gallery-photo{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;    
+  &:hover {
+    background-color: $color-1 !important;
+    border: 1px solid $color-1 !important;
     transition: 0.2s;
-
-    &:hover{
-        filter: brightness(50%);
-        cursor: pointer;
-        transition: 0.2s;
-    }
+  }
 }
 
-.cst-gallery-image-crop-right-bottom-small{
-    object-position: 100% 100%;
+.cst-gallery-header-frame {
+  overflow: hidden;
+  height: 450px;
 }
 
-.cst-gallery-image-crop-left-medium{
-    object-position: 14% 50%;
+.cst-gallery-photo {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s;
+
+  &:hover {
+    filter: brightness(50%);
+    cursor: pointer;
+    transition: 0.2s;
+  }
+}
+
+.cst-gallery-image-crop-right-bottom-small {
+  object-position: 100% 100%;
+}
+
+.cst-gallery-image-crop-left-medium {
+  object-position: 14% 50%;
 }
 
 .cst-gallery-image-crop-left-large {
-    object-position: 35% 50%;
+  object-position: 35% 50%;
 }
 
 .cst-gallery-image-crop-right-medium {
-    object-position: 80% 50%;
+  object-position: 80% 50%;
 }
 
 .cst-gallery-image-crop-right-large {
-    object-position: 65% 50%;
+  object-position: 65% 50%;
 }
 
-.cst-wish-card{
-    padding: 5px;
-    color: #fff;
-    border-bottom: 1px solid #fff;
-    overflow-wrap: break-word;
+.cst-wish-card {
+  padding: 5px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  overflow-wrap: break-word;
 }
 
-.cst-wish-section{
-    margin-top: 80px;
+.cst-wish-section {
+  margin-top: 80px;
 }
 
-.cst-wish-canvas{
-    max-height: 500px;
-    overflow-y: auto;
+.cst-wish-canvas {
+  max-height: 500px;
+  overflow-y: auto;
 }
 
-.cst-closing-title{
+.cst-closing-title {
   font-size: 4em;
 }
 
-.cst-closing-signature{
+.cst-closing-signature {
   font-size: 4em;
 }
 
+.cst-music-btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  left: 0;
+  right: 0;
+}
 
+@keyframes zoomIn {
+  from {
+    visibility: visible;
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+    display: inline-block;
+  }
+}
 
-@media only screen and (max-width: 780px) { 
-  .cst-gallery-header-frame{        
-      height: 300px;        
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+    z-index: 9;
+  }
+  to {
+    transform: scale(0);
+    visibility: hidden;
+    width: 0;
+  }
+}
+
+.cst-animate-zoom-in {
+  animation-name: zoomIn;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  // animation-iteration-count: infinite;
+}
+
+.cst-animate-zoom-out {
+  animation-name: zoomOut;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  // animation-iteration-count: infinite;
+}
+
+// @keyframes fadeOut {
+//   from {
+//     transform: scale(1);
+//   }
+//   to {
+//     transform: scale(0.5);
+//   }
+// }
+
+// @keyframes fadeIn {
+//   from {
+//     transform: scale(0.5);
+//   }
+//   to {
+//     transform: scale(1);
+//   }
+// }
+
+// .fade-out {
+//   animation: fadeOut 2s forwards; /* Adjust duration as needed */
+// }
+
+// .fade-in {
+//   display: inline-block;
+//   animation: fadeIn 2s forwards; /* Adjust duration as needed */
+// }
+
+@media only screen and (max-width: 780px) {
+  .cst-gallery-header-frame {
+    height: 300px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-    // .cst-intro-padding-bottom{
-    //     padding-bottom: 50px !important;
-    // }
+  // .cst-intro-padding-bottom{
+  //     padding-bottom: 50px !important;
+  // }
 
-    // .cst-intro-photo-one{
-    //     height: 100% !important;
-    //     // object-position: center right;        
-    // }
+  // .cst-intro-photo-one{
+  //     height: 100% !important;
+  //     // object-position: center right;
+  // }
 
-    // .cst-intro-photo-two{
-    //     // height: 100% !important;
-    //     object-position: -95px -150px;
-    // }
+  // .cst-intro-photo-two{
+  //     // height: 100% !important;
+  //     object-position: -95px -150px;
+  // }
 
-    // .cst-intro-and{
-    //     display: block !important;
-    // }  
-  }
+  // .cst-intro-and{
+  //     display: block !important;
+  // }
+}
 
 // iPhone resolution
 @media only screen and (max-width: 450px) {
-    // .cst-intro-photo-one{
-    //     height: 100% !important;
-    //     // object-position: center right;
-    // }
-  
-    // .cst-intro-photo-two{
-    //     // height: 100% !important;
-    //     object-position: -60px 0;
-    // }
+  // .cst-intro-photo-one{
+  //     height: 100% !important;
+  //     // object-position: center right;
+  // }
 
+  // .cst-intro-photo-two{
+  //     // height: 100% !important;
+  //     object-position: -60px 0;
+  // }
 
-    .cst-intro-title{
-      font-size: 3.3em;      
-    }
+  .cst-intro-title {
+    font-size: 3.3em;
+  }
 
-    .cst-intro-text{
-      font-size: 1.2em;
-      letter-spacing: 5px;
-    }
+  .cst-intro-text {
+    font-size: 1.2em;
+    letter-spacing: 5px;
+  }
 
-    // .cst-intro-container{
-    //   height: 80vh;
-    // }
+  // .cst-intro-container{
+  //   height: 80vh;
+  // }
 
-    .cst-intro-photo-container{
-      // height: 70vh; // TODO: better using scale of em for parent dynamic relative purpose (element = parent * 0.7).
-    }
+  .cst-intro-photo-container {
+    // height: 70vh; // TODO: better using scale of em for parent dynamic relative purpose (element = parent * 0.7).
+  }
 
-    // .cst-intro-photo{
-    //   transform: scale(1.6) translate(6%); // After zoom, control horizontal position
-    //   object-position: 0% -40%; // Control vertical position
-    // }
+  // .cst-intro-photo{
+  //   transform: scale(1.6) translate(6%); // After zoom, control horizontal position
+  //   object-position: 0% -40%; // Control vertical position
+  // }
 
-    // .cst-intro-div{            
-    //   bottom: 30em;                      
-    // }
+  // .cst-intro-div{
+  //   bottom: 30em;
+  // }
 
-     .cst-intro-photo{
-      transform: scale(1.7) translate(-9%, 16%); // After zoom, control horizontal and vertical position
-      // object-position: 0% -300%; // Control vertical position      
-    }
+  .cst-intro-photo {
+    transform: scale(1.7) translate(-9%, 16%); // After zoom, control horizontal and vertical position
+    // object-position: 0% -300%; // Control vertical position
+  }
 
-    .cst-intro-div{            
-      top: 3.5em;                      
-    }    
+  .cst-intro-div {
+    top: 3.5em;
+  }
 
-    .cst-closing-title{
-      font-size: 2.5em;     
-    }
+  .cst-closing-title {
+    font-size: 2.5em;
+  }
 
-    .cst-closing-signature{
-      font-size: 3.5em;      
-    }
-
-  } 
+  .cst-closing-signature {
+    font-size: 3.5em;
+  }
+}
 
 // @media only screen and (max-width: 768px) {
 //     .cst-intro-padding-bottom{
@@ -356,7 +423,7 @@ body {
 
 //     .cst-intro-photo-one{
 //         height: 100% !important;
-//         // object-position: center right;        
+//         // object-position: center right;
 //     }
 
 //     .cst-intro-photo-two{
@@ -368,7 +435,6 @@ body {
 //         display: block !important;
 //     }
 //   }
-
 
 // @media only screen and (max-width: 450px) {
 //     .cst-intro-photo-one{
@@ -394,10 +460,10 @@ body {
 
 // .cst-intro-photo-one{
 //     // width: 580px;
-//     // height: 580px;    
+//     // height: 580px;
 //     // object-fit: cover;
 
-//     width: 100%;    
+//     width: 100%;
 //     height: 100vh !important;
 //     object-fit: cover;
 
@@ -408,7 +474,7 @@ body {
 
 // .cst-intro-photo-two{
 //     width: 580px;
-//     height: 580px;    
+//     height: 580px;
 //     object-fit: cover;
 
 //     // Image Position Scaling Handle

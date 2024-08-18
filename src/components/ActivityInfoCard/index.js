@@ -43,18 +43,18 @@ function ActivityInfoCard({ props }) {
           // style={{ boxShadow: "3px 0px 0px 0px #584619" }}
           style={{ borderRight: "3px solid #584619" }}
         >
-          <h3 className="cst-color-2">{date}</h3>
+          <h4 className="cst-color-2">{date}</h4>
         </Col>
         <Col xs={6} md={6} className="py-3">
-          <h3 className="cst-color-2">{time}</h3>
+          <h4 className="cst-color-2">{time}</h4>
         </Col>
       </Row>
       <Row className="d-flex justify-content-center py-4">
         <Col xs={9} md={12} className="">
-          <h5 className="">{location1}</h5>
+          <h4 className="">{location1}</h4>
         </Col>
         <Col xs={9} md={12}>
-          <h5>{location2}</h5>
+          <h4>{location2}</h4>
         </Col>
       </Row>
       <a target="_blank" rel="noreferrer" href={targetLink}>
