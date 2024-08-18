@@ -38,6 +38,7 @@ function Index() {
       {/* {!show && <PlayButton music={music} />} */}
       <Introduction show={show} />
       {/* <FamilyBackup /> */}
+      <Family />
       <Ceremony music={music} />
       <DressCode />
       {/* <BibleQuote /> */}

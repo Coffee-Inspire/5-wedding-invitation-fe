@@ -1,5 +1,46 @@
 const takeIcon = (key) => {
   return {
+    pause: (
+      <svg
+        id="Filled"
+        width="50"
+        height="50"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M6.5,0A3.5,3.5,0,0,0,3,3.5v17a3.5,3.5,0,0,0,7,0V3.5A3.5,3.5,0,0,0,6.5,0Z" />
+        <path d="M17.5,0A3.5,3.5,0,0,0,14,3.5v17a3.5,3.5,0,0,0,7,0V3.5A3.5,3.5,0,0,0,17.5,0Z" />
+      </svg>
+    ),
+    play: (
+      <svg
+        id="Layer_1"
+        width="50"
+        height="50"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M19.749,9.464,5,.048V23.989L19.743,14.54a3,3,0,0,0,.006-5.076Z" />
+      </svg>
+    ),
+    cross: (
+      <svg
+        id="Layer_1"
+        height="40"
+        width="40"
+        version="1.1"
+        viewBox="0 0 87.16 122.88"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g>
+          <polygon
+            className="st0"
+            points="87.16,28.3 87.16,51.47 55.17,51.47 55.17,122.88 31.99,122.88 31.99,51.47 0,51.47 0,28.3 31.99,28.3 31.99,0 55.17,0 55.17,28.3 87.16,28.3"
+            fill="#ffffff"
+          />
+        </g>
+      </svg>
+    ),
     ring: (
       <svg
         id="Layer_1"
