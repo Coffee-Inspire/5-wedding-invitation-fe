@@ -19,7 +19,7 @@ import Bible from "./Bible";
 // import check3Dec from "../helpers/changeData3Dec";
 // import timing from "../helpers/timing";
 
-function Index() {
+function Screen() {
   const [show, setShow] = useState(true);
   const [music] = useState(new Audio(Song));
 
@@ -48,4 +48,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default Screen;
