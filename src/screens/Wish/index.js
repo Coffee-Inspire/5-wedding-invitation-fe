@@ -57,7 +57,7 @@ function Wish() {
 
   return (
     // <div className="text-center my-4 py-4 cst-bg-2">
-    <Row className="cst-bg-2 text-center my-4 py-4 px-0">
+    <Row className="mx-0 cst-bg-3 text-center py-5 ">
       <Col xs={12} className="py-5">
         {/* <div className="text-center pb-3">
           <span style={{ fill: "red !important" }}>
@@ -72,20 +72,27 @@ function Wish() {
             {activityData.title}
           </h3>
         </div> */}
-        <AnimationOnScroll
+        {/* <AnimationOnScroll
           animateIn="animate__zoomIn"
           className="pb-3"
           animateOnce
         >
           <span>{takeIcon("loveLetter")}</span>
-        </AnimationOnScroll>
+        </AnimationOnScroll> */}
         <AnimationOnScroll animateIn="animate__slideInUp" animateOnce>
-          <h3
-            className="fw-bold"
-            style={{ letterSpacing: "5px", color: "#fff" }}
-          >
-            {activityData.title}
-          </h3>
+          <div className="d-flex align-items-center justify-content-center">
+            <div className="cst-color-1 p-4 position-relative">
+              <h1 className="display-3 py-1" style={{ letterSpacing: "5px" }}>
+                Wish
+              </h1>
+              <h1
+                className="cst-font-1 position-absolute"
+                style={{ bottom: "10%", left: "30%" }}
+              >
+                Message
+              </h1>
+            </div>
+          </div>
         </AnimationOnScroll>
       </Col>
       <Col xs={12}>
@@ -100,6 +107,7 @@ function Wish() {
               />
               <Form.Control
                 as="textarea"
+                rows={6}
                 {...register("wish", { required: true })}
                 className="shadow-none my-3"
                 placeholder="Message"
@@ -107,7 +115,7 @@ function Wish() {
               />
               <Button
                 theme={2}
-                className="mt-5 w-50"
+                className="mt-5 py-2 w-100"
                 disabled={pingStatus !== 200 || isFetching}
               >
                 {activityData.buttonText}
@@ -116,18 +124,23 @@ function Wish() {
           </Col>
         </Row>
       </Col>
-      <Col xs={12} className="pb-5">
+      <Col xs={12} className="py-5">
         <Row className="mx-0 d-flex justify-content-center cst-wish-section">
+          <Col xs={12} className="mb-4">
+            {data && (
+              <small className="cst-color-1">
+                {(data && data.length) || 0} Wish Messages
+              </small>
+            )}
+          </Col>
           <Col xs={11} md={6} className="cst-wish-canvas pe-4">
-            {data.length > 0 &&
+            {data &&
+              data.length > 0 &&
               data
                 .map((item, idx) => (
                   <div key={item.id} className="text-start mt-3 cst-wish-card">
-                    <h5>{item.name}</h5>
-                    <p
-                      className="fst-italic cst-text-darken"
-                      style={{ color: "rgba(255,255,255,0.6)" }}
-                    >
+                    <h6 className="fw-bold">{item.name}</h6>
+                    <p style={{ color: "rgba(255,255,255,0.6)" }}>
                       {item.wish}
                     </p>
                   </div>

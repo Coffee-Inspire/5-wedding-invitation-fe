@@ -1,7 +1,8 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
+import MusicBox from "../../components/MusicBox";
+import Logo from "../../assets/images/logo.png";
 
-function Closing() {
+function Closing({ music }) {
   const activityData = {
     title: "With Love and Joy",
     signature: "Risal y Gaby",
@@ -9,28 +10,30 @@ function Closing() {
   };
 
   return (
-    <div className="text-center" style={{ padding: "50px 0 100px 0" }}>
-      <Row className="d-flex justify-content-center text-center">
-        <Col xs={12} md={12} className="pt-4 pb-3">
-          <h1 className="cst-closing-title cst-color-4">
-            <span className="cst-font-3">With </span>
-            <span className="cst-font-3 cst-color-1">Love </span>
-            <span className="cst-font-3">and </span>
-            <span className="cst-font-3 cst-color-1">Joy </span>
-          </h1>
-        </Col>
-        <Col xs={10} md={12} className="pb-4">
-          <h1 className="cst-color-2 cst-font-5 cst-closing-signature">
-            {activityData.signature}
-          </h1>
-        </Col>
-        <Col xs={10} md={6} className="py-4">
-          <h5 className="cst-color-2" style={{ letterSpacing: "0.8px" }}>
-            {activityData.text}
-          </h5>
-        </Col>
-      </Row>
-      <div className="px-4"></div>
+    <div className="cst-closing-wrap text-center d-flex flex-column justify-content-center position-relative">
+      <div className="cst-closing-bg" />
+      <div className="text-center">
+        <img
+          src={Logo}
+          alt=""
+          style={{ width: "180px", height: "180px", objectFit: "cover" }}
+        />
+      </div>
+      <h3 className="py-2">{activityData.title}</h3>
+      <h5 className="cst-font-1 py-3">{activityData.signature}</h5>
+      <p className="py-3">{activityData.text}</p>
+      <MusicBox music={music} />
+      <small
+        className="py-3 text-center"
+        style={{
+          position: "absolute",
+          bottom: "10px",
+          left: "50%",
+          transform: "translateX(-50%)",
+        }}
+      >
+        Copyright @2024 Le Debute Team
+      </small>
     </div>
   );
 }

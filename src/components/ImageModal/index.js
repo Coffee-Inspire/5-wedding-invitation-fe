@@ -1,9 +1,14 @@
 import React from "react";
 import { Modal, Carousel } from "react-bootstrap";
-import galleryImages from "../../data/galleryImagesData";
 import "./index.scss";
 
-function ImageModal({ modalState, closeModal, initIndex, setInitIndex }) {
+function ImageModal({
+  modalState,
+  closeModal,
+  initIndex,
+  setInitIndex,
+  listImage = [],
+}) {
   return (
     <Modal
       centered
@@ -22,7 +27,7 @@ function ImageModal({ modalState, closeModal, initIndex, setInitIndex }) {
 
       <Modal.Body>
         <Carousel activeIndex={initIndex} onSelect={(e) => setInitIndex(e)}>
-          {galleryImages.map((item) => (
+          {listImage.map((item) => (
             <Carousel.Item key={item.image}>
               <img src={item.image} alt="" className="cst-modal-item-image" />
             </Carousel.Item>

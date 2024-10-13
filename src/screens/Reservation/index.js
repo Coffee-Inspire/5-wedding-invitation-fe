@@ -3,11 +3,8 @@ import { Row, Col, Form } from "react-bootstrap";
 import axios from "axios";
 import { useForm, Controller } from "react-hook-form";
 import toCapitalize from "../../helpers/toCapitalize";
-// import "./index.scss";
 
-import BannerOverlay from "../../components/BannerOverlay";
 import Button from "../../components/Button";
-import { takeIcon } from "../../data/iconMapper";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { apis } from "../../api/apis";
 import Select, { StylesConfig } from "react-select";
@@ -15,7 +12,7 @@ import Select, { StylesConfig } from "react-select";
 function Reservation() {
   const activityData = {
     title: "RSVP",
-    text: "Please confirm your attendance",
+    text: "Guests are kindly requested to fill out the attendance form below",
     buttonText: "SEND RSVP",
   };
 
@@ -72,27 +69,20 @@ function Reservation() {
     ping();
 
     axios.get(apis.rsvp.get).then((res) => console.log(res));
-    // .finally(() => setIsFetching(false));
   }, []);
 
   return (
-    <div className="text-center my-4 py-4">
-      <AnimationOnScroll
-        animateIn="animate__zoomIn"
-        className="pb-3"
-        animateOnce
-      >
-        <span>{takeIcon("book")}</span>
-      </AnimationOnScroll>
+    <div
+      className="text-center cst-bg-2"
+      style={{ padding: "150px 0 150px 0" }}
+    >
       <AnimationOnScroll animateIn="animate__slideInUp" animateOnce>
-        <h3 className="fw-bold" style={{ letterSpacing: "5px" }}>
-          {activityData.title}
-        </h3>
+        <h3 style={{ letterSpacing: "5px" }}>{activityData.title}</h3>
       </AnimationOnScroll>
 
-      <h5 className="text-center py-3">{activityData.text}</h5>
+      <p className="text-center p-3">{activityData.text}</p>
 
-      <Row className="d-flex justify-content-center">
+      <Row className="g-0 d-flex justify-content-center">
         <Col xs={11} md={6}>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Control
@@ -132,7 +122,7 @@ function Reservation() {
               )}
             />
             <Button
-              className="mt-5 w-50"
+              className="mt-5 py-3 w-100"
               disabled={pingStatus !== 200 || isFetching}
             >
               {activityData.buttonText}
@@ -140,67 +130,7 @@ function Reservation() {
           </Form>
         </Col>
       </Row>
-
-      {/* <Row className="d-flex justify-content-center py-4">
-      <Col xs={9} md={12} className="">
-        <h5 className="">{location1}</h5>
-      </Col>
-      <Col xs={9} md={12}>
-        <h5>{location2}</h5>
-      </Col>
-    </Row> */}
     </div>
-
-    // <div className="d-flex flex-column justify-content-center cst-reserve-bg-photo">
-    //   <BannerOverlay className="text-center">
-    //     <Row className="m-0 d-flex justify-content-center">
-    //       <Col xs={10} md={6}>
-    //         <h3 className="cst-reserve-title">{screenContent.title}</h3>
-    //         <p>{screenContent.text}</p>
-    //         <Form onSubmit={handleSubmit(onSubmit)}>
-    //           <Row className="m-0">
-    //             <Col md={3} className="p-0 d-flex  align-items-center">
-    //               <label>Nama</label>
-    //             </Col>
-    //             <Col md={9} className="p-0">
-    //               <Form.Control
-    //                 {...register("guestName", { required: true })}
-    //                 className="shadow-none cst-form"
-    //               />
-    //             </Col>
-
-    //             <Col md={3} className="p-0 d-flex  align-items-center">
-    //               <label>Jumlah Tamu</label>
-    //             </Col>
-    //             <Col md={9} className="p-0">
-    //               <Form.Select
-    //                 {...register("guestCount", { required: true })}
-    //                 className="shadow-none cst-select"
-    //               >
-    //                 <option>1</option>
-    //                 <option>2</option>
-    //               </Form.Select>
-    //             </Col>
-
-    //             <Col md={3} className="p-0 d-flex  align-items-center">
-    //               <label>Kehadiran Tamu</label>
-    //             </Col>
-    //             <Col md={9} className="p-0">
-    //               <Form.Select
-    //                 {...register("guestStatus", { required: true })}
-    //                 className="shadow-none cst-select"
-    //               >
-    //                 <option>Hadir</option>
-    //                 <option>Tidak Dapat Hadir</option>
-    //               </Form.Select>
-    //             </Col>
-    //           </Row>
-    //           <Button className="mt-5 w-100">{screenContent.buttonText}</Button>
-    //         </Form>
-    //       </Col>
-    //     </Row>
-    //   </BannerOverlay>
-    // </div>
   );
 }
 
