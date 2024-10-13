@@ -3,24 +3,19 @@ import { Container } from "react-bootstrap";
 
 import PlayButton from "../components/PlayButton";
 import Introduction from "./Introduction";
-// import FamilyBackup from "./FamilyBackup";
 import Ceremony from "./Ceremony";
 import Family from "./Family";
-import BibleQuote from "./BibleQuote";
-import LiveStreaming from "./LiveStreaming";
-import ReservationBackup from "./ReservationBackup";
 import Reservation from "./Reservation";
 import Gallery from "./Gallery";
-import GiftBackup from "./GiftBackup";
 import Gift from "./Gift";
 import Wish from "./Wish";
-import WishesBackup from "./WishesBackup";
+// import Streaming from "./Streaming";
 import Closing from "./Closing";
 import Footer from "../components/Footer";
 import Cover from "./Cover";
 
-import Song from "../assets/i-was-made-for-loving-you.mp3";
-import DressCode from "./DressCode";
+import Song from "../assets/nathan-sykes-over-and-over-again-ft-ariana-grande.mp3";
+import Bible from "./Bible";
 // import check3Dec from "../helpers/changeData3Dec";
 // import timing from "../helpers/timing";
 
@@ -28,31 +23,27 @@ function Index() {
   const [show, setShow] = useState(true);
   const [music] = useState(new Audio(Song));
 
+  const currentUrl = window.location.href;
+  const url = new URL(currentUrl);
+
   useEffect(() => {
     setShow(true);
   }, []);
 
   return (
-    <Container fluid className="">
+    <Container fluid className="p-0">
       <Cover show={show} setShow={setShow} music={music} />
-      {/* {!show && <PlayButton music={music} />} */}
       <Introduction show={show} />
-      {/* <FamilyBackup /> */}
+      <Bible />
       <Family />
-      <Ceremony music={music} />
-      <DressCode />
-      {/* <BibleQuote /> */}
-      {/* <LiveStreaming /> */}
-      {/* <Family />1 */}
+      <Ceremony currentUrl={url.pathname} />
       <Gallery />
-      <Gift />
-      <Reservation />
-
-      {/* {timing.afterCeremony() && <Gift />} */}
-      {/* <WishesBackup /> */}
+      {url.pathname !== "/gabycolleague" && <Reservation />}
+      {url.pathname !== "/invitation" && url.pathname !== "/gabycolleague" && (
+        <Gift />
+      )}
       <Wish />
-      <Closing />
-      <Footer />
+      <Closing music={music} />
     </Container>
   );
 }

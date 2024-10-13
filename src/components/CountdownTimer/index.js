@@ -57,10 +57,10 @@ function CountdownTimer() {
         lg={2}
         className={`${
           checkStopTicking.month() ? "cst-countdown-col-out " : ""
-        }py-2 px-4 m-1 cst-countdown-col`}
+        }py-2 px-4 cst-countdown-col`}
       >
-        <h1 className="">{monthLeft}</h1>
-        <p className="">Month</p>
+        <h1 className="display-4">{monthLeft}</h1>
+        <small className="">Month</small>
       </Col>
       <Col
         xs={2}
@@ -68,10 +68,10 @@ function CountdownTimer() {
         lg={2}
         className={`${
           checkStopTicking.day() ? "cst-countdown-col-out " : ""
-        }py-2 px-4 m-1 cst-countdown-col`}
+        }py-2 px-4 cst-countdown-col`}
       >
-        <h1 className="">{dayLeft}</h1>
-        <p className="">Day</p>
+        <h1 className="display-4">{dayLeft}</h1>
+        <small className="">Day</small>
       </Col>
       <Col
         xs={2}
@@ -79,10 +79,10 @@ function CountdownTimer() {
         lg={2}
         className={`${
           checkStopTicking.hour() ? "cst-countdown-col-out " : ""
-        }py-2 px-4 m-1 cst-countdown-col`}
+        }py-2 px-4 cst-countdown-col`}
       >
-        <h1 className="">{hourLeft}</h1>
-        <p className="">Hour</p>
+        <h1 className="display-4">{hourLeft}</h1>
+        <small className="">Hour</small>
       </Col>
       <Col
         xs={2}
@@ -90,10 +90,10 @@ function CountdownTimer() {
         lg={2}
         className={`${
           checkStopTicking.minute() ? "cst-countdown-col-out " : ""
-        }py-2 px-4 m-1 cst-countdown-col`}
+        }py-2 px-4 cst-countdown-col`}
       >
-        <h1 className="">{minuteLeft}</h1>
-        <p className="">Minute</p>
+        <h1 className="display-4">{minuteLeft}</h1>
+        <small className="">Minute</small>
       </Col>
       <Col
         xs={2}
@@ -101,10 +101,10 @@ function CountdownTimer() {
         lg={2}
         className={`${
           checkStopTicking.second() ? "cst-countdown-col-out " : ""
-        }py-2 px-4 m-1 cst-countdown-col d-none d-md-flex`}
+        }py-2 px-4 cst-countdown-col d-none d-md-flex`}
       >
-        <h1 className="">{secondLeft}</h1>
-        <p className="">Second</p>
+        <h1 className="display-4">{secondLeft}</h1>
+        <small className="">Second</small>
       </Col>
     </Row>
   );

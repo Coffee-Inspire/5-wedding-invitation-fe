@@ -15,9 +15,9 @@ function Button({ props, disabled, className, onClick, children, theme }) {
       variant="none"
       onClick={onClick}
       disabled={disabled}
-      className={`${themeStyle(theme ?? 1)} ${className}`}
+      className={`px-4 py-1 ${themeStyle(theme ?? 1)} ${className}`}
     >
-      <span className="cst-btn-1-text">{children}</span>
+      <span className="cst-color-1">{children}</span>
     </BS>
   );
 }

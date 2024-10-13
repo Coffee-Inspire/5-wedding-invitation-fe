@@ -1,15 +1,10 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
-// import "./index.scss";
 
-import CountdownTimer from "../../components/CountdownTimer";
-import ActivityInfoCard from "../../components/ActivityInfoCard";
 import { takeIcon } from "../../data/iconMapper";
-import timing from "../../helpers/timing";
-import MusicBox from "../../components/MusicBox";
+import Button from "../../components/Button";
 
 function Ceremony(props) {
-  const { music } = props;
+  const { currentUrl } = props;
   const activityData = [
     {
       title: "CEREMONY",
@@ -32,45 +27,59 @@ function Ceremony(props) {
     },
   ];
 
-  // const contentDisplay = () => {
-  //   if (timing.afterCeremony())
-  //     return <ActivityInfoCard props={activityData[1]} />;
-  //   else return <ActivityInfoCard props={activityData[0]} />;
-  // };
-
   return (
-    <>
-      <Row className="d-flex justify-content-center align-items-center py-4">
-        <Col xs={12} className="text-center py-4">
-          <MusicBox music={music} />
-        </Col>
-        {/* <Col xs={12} className="text-center py-4">
-          <h1 className="cst-font-1 cst-color-2">You're invited!</h1>
-        </Col>
-        <Col xs={8} md={6} className="text-center py-4">
-          <h5 className="">We want you to be a part of this special moment.</h5>
-        </Col> */}
-        <Col xs={10} md={7} className="p-0">
-          <div className="d-flex justify-content-center py-4">
-            <CountdownTimer />
+    <div className="cst-ceremony-wrap cst-bg-2 text-center py-5">
+      <div className="cst-ceremony-title-wrap cst-color-1 d-flex align-items-center justify-content-center">
+        <div className="cst-ceremony-title-bg" />
+        <div className="d-flex align-items-center justify-content-center">
+          <div className="p-4 position-relative">
+            <h1 className="display-3 py-1" style={{ letterSpacing: "5px" }}>
+              Wedding
+            </h1>
+            <h1
+              className="cst-font-1 position-absolute"
+              style={{ bottom: "5%", right: "23%" }}
+            >
+              Date
+            </h1>
           </div>
-          {/* {contentDisplay()} */}
-          {/* <ActivityInfoCard props={activityData[0]} /> */}
-          <ActivityInfoCard props={activityData[1]} />
-        </Col>
-      </Row>
-    </>
-
-    // <div className="cst-cer-bg-photo">
-    //   <Row className="m-0 d-flex justify-content-center align-items-center">
-    //     <Col xs={10} md={7} className="p-0 cst-content-info-frame">
-    //       <div className="d-flex justify-content-center pt-5">
-    //         <CountdownTimer />
-    //       </div>
-    //       {contentDisplay()}
-    //     </Col>
-    //   </Row>
-    // </div>
+        </div>
+      </div>
+      <div style={{ padding: "150px 0 150px 0", letterSpacing: "1.5px" }}>
+        <h2 className="py-2">
+          Risal & Gaby
+          <br />
+          Wedding
+        </h2>
+        <p className="py-2">
+          Saturday 7 December 2024
+          <br />
+          11:00 WIB until Finish
+        </p>
+        {currentUrl !== "/gabycolleague" && (
+          <div>
+            <p className="py-2">
+              Kompol Maksum 195, Semarang
+              <br />
+              IFGF Semarang
+            </p>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={"https://maps.app.goo.gl/V5tXgLtvYyYbPPnU9"}
+            >
+              <Button>GOOGLE MAPS</Button>
+            </a>
+          </div>
+        )}
+        <div className="pt-5 mt-5">
+          <h2>Live Streaming</h2>
+          {/* <a target="_blank" rel="noreferrer" href={""}> */}
+          <Button disabled>COMING SOON</Button>
+          {/* </a> */}
+        </div>
+      </div>
+    </div>
   );
 }
 

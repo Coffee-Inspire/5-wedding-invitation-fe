@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
-import "./index.scss";
 import "animate.css/animate.min.css";
 
-import PhotoCover from "../../assets/photos/cover.jpg";
+import PhotoCover from "../../assets/photo/cover.webp";
 import Button from "../../components/Button";
 import { fadeIn } from "../../helpers/musicFadeInOut";
 
@@ -39,17 +38,23 @@ function Cover(props) {
       <img className="cst-cover-photo" src={PhotoCover} alt="" />
       <Row className="m-0 cst-cover-content">
         <Col xs={12} md={8} className="px-0 text-center">
-          <h1 className="cst-cover-bridegroom cst-font-theme cst-color- m-4">
-            RISAL {`&`} GABY
+          <h1 className="py-4 display-3" style={{ letterSpacing: "8px" }}>
+            Risal & Gaby
           </h1>
           {guest && (
             <>
-              <h5 className="cst-cover-dear">Kepada :</h5>
+              <p className="cst-cover-dear">Special Invitation to</p>
               <h4 className="cst-cover-guest my-4">{guest}</h4>
             </>
           )}
-          <Button className="cst-btn-3 px-4 py-2" onClick={() => closeCover()}>
-            Buka Undangan
+          <p className="cst-cover-dear">
+            We cordially invite you to attend our wedding ceremony.
+          </p>
+          <Button
+            className="my-2 cst-btn-3 px-4 py-2"
+            onClick={() => closeCover()}
+          >
+            OPEN INVITATION
           </Button>
         </Col>
       </Row>

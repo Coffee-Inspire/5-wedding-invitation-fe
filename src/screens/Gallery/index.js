@@ -1,22 +1,97 @@
 import React, { useState } from "react";
-import { AnimationOnScroll } from "react-animation-on-scroll";
-import { Row, Col } from "react-bootstrap";
-
+import Slider from "react-slick";
 import ImageModal from "../../components/ImageModal";
-import galleryImages from "../../data/galleryImagesData";
 import "animate.css/animate.min.css";
-import "./index.scss";
+
+import One from "../../assets/photo/gallery/1.webp";
+import Two from "../../assets/photo/gallery/2.webp";
+import Three from "../../assets/photo/gallery/3.webp";
+import Four from "../../assets/photo/gallery/4.webp";
+import Five from "../../assets/photo/gallery/5.webp";
+import Six from "../../assets/photo/gallery/6.webp";
+import Seven from "../../assets/photo/gallery/7.webp";
+import Eight from "../../assets/photo/gallery/8.webp";
+import Nine from "../../assets/photo/gallery/9.webp";
+import Ten from "../../assets/photo/gallery/10.webp";
+import Eleven from "../../assets/photo/gallery/11.webp";
+import Twelve from "../../assets/photo/gallery/12.webp";
+import Thirteen from "../../assets/photo/gallery/13.webp";
+import Fourteen from "../../assets/photo/gallery/14.webp";
+import Fifteen from "../../assets/photo/gallery/15.webp";
+import Sixteen from "../../assets/photo/gallery/16.webp";
+import Seventeen from "../../assets/photo/gallery/17.webp";
+import Eighteen from "../../assets/photo/gallery/18.webp";
 
 function Gallery() {
   const [modalState, setModalState] = useState(false);
   const [initIndex, setInitIndex] = useState("");
-  const openModal = (index) => {
+  const [initListImages, setInitListImages] = useState([]);
+  const openModal = (index, whole) => {
     setInitIndex(index);
+    setInitListImages(whole);
     setModalState(true);
   };
   const closeModal = () => {
     setModalState(false);
   };
+
+  const sliderImages1 = [
+    {
+      image: One,
+      highlight: "cst-gallery-image-crop-center",
+    },
+    {
+      image: Two,
+      highlight: "cst-gallery-image-crop-left-large",
+    },
+    {
+      image: Three,
+      highlight: "cst-gallery-image-crop-center",
+    },
+    {
+      image: Four,
+      highlight: "cst-gallery-image-crop-center",
+    },
+    {
+      image: Five,
+      highlight: "cst-gallery-image-crop-center",
+    },
+    {
+      image: Six,
+      highlight: "cst-gallery-image-crop-left-medium",
+    },
+  ];
+
+  const sliderImages2 = [
+    {
+      image: Seven,
+      highlight: "cst-gallery-image-crop-center",
+    },
+    {
+      image: Eight,
+      highlight: "cst-gallery-image-crop-left-medium-plus",
+    },
+    {
+      image: Nine,
+      highlight: "cst-gallery-image-crop-left-medium",
+    },
+    {
+      image: Ten,
+      highlight: "cst-gallery-image-crop-right-large",
+    },
+    {
+      image: Eleven,
+      highlight: "cst-gallery-image-crop-right-medium-plus",
+    },
+    {
+      image: Twelve,
+      highlight: "cst-gallery-image-crop-left-medium-plus-2",
+    },
+    {
+      image: Sixteen,
+      highlight: "cst-gallery-image-crop-right-large",
+    },
+  ];
 
   const imageFocus = (indicator) => {
     const classMapper = {
@@ -32,46 +107,109 @@ function Gallery() {
     } cst-gallery-photo`;
   };
 
+  const rsOptions = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1800,
+  };
+
   return (
-    <div>
-      {/* <h1 className="my-5 cst-gallery-title">OUR GALLERY</h1> */}
-      <AnimationOnScroll animateIn="animate__slideInUp" animateOnce>
-        <h3
-          className="pt-5 pb-3 text-center fw-bold"
-          style={{ letterSpacing: "5px" }}
-        >
-          OUR GALLERY
-        </h3>
-      </AnimationOnScroll>
-      <Row className="mb-5 cst-gallery-canvas">
-        {galleryImages.map((item, index) => (
-          <Col
-            key={item.indicate}
-            xs={item.xs}
-            md={item.md}
-            // style={{ border: "1px solid red" }}
-            className="px-1"
+    <div className="cst-bg-1 px-1" style={{ padding: "50px 0 50px 0" }}>
+      <div className="py-5">
+        <div className="p-4 position-relative text-center">
+          <h2 className="display-4 py-" style={{ letterSpacing: "5px" }}>
+            Gallery
+          </h2>
+          <h2
+            className="cst-font-1 position-absolute"
+            style={{
+              bottom: "0%",
+              left: "50%",
+              transform: "translate(-20%, -10%)",
+            }}
           >
-            <AnimationOnScroll
-              className="cst-gallery-header-frame mb-2"
-              animateIn="animate__slideInLeft"
-              animateOnce
-            >
-              <img
-                onClick={() => openModal(index)}
-                className={imageFocus(item.indicate)}
-                src={item.image}
-                alt=""
-              />
-            </AnimationOnScroll>
-          </Col>
-        ))}
-      </Row>
+            Photos
+          </h2>
+        </div>
+      </div>
+      <div className="cst-gallery-canvas">
+        <div className="cst-gallety-slider-canvas w-100">
+          <Slider {...rsOptions} className="mx-1">
+            {sliderImages1.map((item, index, whole) => {
+              return (
+                <div key={index} className="px-2">
+                  <div className="cst-gallery-img-frame">
+                    <img
+                      onClick={() => openModal(index, whole)}
+                      className={`cst-gallery-img ${item.highlight}`}
+                      src={item.image}
+                      alt=""
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </Slider>
+        </div>
+        <div className="cst-gallery-img-frame-2 px-2 py-2">
+          <img
+            className="cst-gallery-img cst-gallery-image-crop-top-large"
+            src={Thirteen}
+            alt=""
+          />
+        </div>
+        <div className="cst-gallery-img-frame-2 px-2 py-2">
+          <img
+            className="cst-gallery-img cst-gallery-image-crop-top-large"
+            src={Fourteen}
+            alt=""
+          />
+        </div>
+        <div className="cst-gallery-img-frame-2 px-2 py-2">
+          <img className="cst-gallery-img" src={Fifteen} alt="" />
+        </div>
+        <Slider {...rsOptions} className="mx-1">
+          {sliderImages2.map((item, index, whole) => {
+            return (
+              <div key={index} className="px-2">
+                <div className="cst-gallery-img-frame">
+                  <img
+                    onClick={() => openModal(index, whole)}
+                    className={`cst-gallery-img ${item.highlight}`}
+                    src={item.image}
+                    alt=""
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </Slider>
+        <div className="cst-gallery-img-frame-2 px-2 py-2">
+          <img
+            className="cst-gallery-img cst-gallery-image-crop-top-medium"
+            src={Seventeen}
+            alt=""
+          />
+        </div>
+        <div className="cst-gallery-img-frame-2 px-2 py-2">
+          <img
+            className="cst-gallery-img cst-gallery-image-crop-top-medium"
+            src={Eighteen}
+            alt=""
+          />
+        </div>
+      </div>
       <ImageModal
         modalState={modalState}
         closeModal={closeModal}
         initIndex={initIndex}
         setInitIndex={setInitIndex}
+        listImage={initListImages}
       />
     </div>
   );
