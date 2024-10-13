@@ -68,7 +68,7 @@ function Reservation() {
   useEffect(() => {
     ping();
 
-    axios.get(apis.rsvp.get).then((res) => console.log(res));
+    axios.get(apis.rsvp.get).then(() => {});
   }, []);
 
   return (

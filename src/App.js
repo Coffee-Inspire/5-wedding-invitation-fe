@@ -1,12 +1,15 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Screen from './screens';
+import Screen from "./screens";
 
 function App() {
   return (
-    <div>
-      <Screen/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="*" element={<Screen />} />
+      </Routes>
+    </Router>
   );
 }
 
