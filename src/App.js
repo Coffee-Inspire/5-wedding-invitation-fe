@@ -7,7 +7,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="*" element={<Screen />} />
+        <Route path="/" element={<Screen />} />
+        <Route path="/invitation" element={<Screen />} />
+        <Route path="/risalfriend" element={<Screen />} />
+        <Route path="/gabycolleague" element={<Screen />} />
       </Routes>
     </Router>
   );
