@@ -13,9 +13,9 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Screen />} />
-        <Route path="/invitation" element={<Screen />} />
-        <Route path="/risalfriend" element={<Screen />} />
-        <Route path="/gabycolleague" element={<Screen />} />
+        <Route path="/invitation" element={<Screen />} exact />
+        <Route path="/risalfriend" element={<Screen />} exact />
+        <Route path="/gabycolleague" element={<Screen />} exact />
         <Route path="*" element={<Navigate to="/404" />} />
         <Route path="/404" element={<h1>Page not found</h1>} />
       </Routes>
