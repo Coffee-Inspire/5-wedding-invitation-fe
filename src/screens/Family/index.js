@@ -11,6 +11,7 @@ import Button from "../../components/Button";
 
 import ImgGentleman from "../../assets/photo/family-1.webp";
 import ImgWoman from "../../assets/photo/family-2.webp";
+import Divider from "../../assets/images/divider.png";
 
 function Family() {
   const activityData = {
@@ -52,26 +53,34 @@ function Family() {
         </Col>
         <Col md={5} xs={12}>
           <div className="text-center py-5">
-            <h3 className="cst-font-1 py-3">Risal</h3>
-            <h2 className="py-2" style={{ letterSpacing: "3px" }}>
+            <h3 className="cst-font-1 py-3">Risal Munadi</h3>
+            {/* <h2 className="py-2" style={{ letterSpacing: "3px" }}>
               {activityData.text1}
-            </h2>
+            </h2> */}
             <div className="py-2">
               <h6>{activityData.text2}</h6>
               <h6>{activityData.text3}</h6>
             </div>
-            <Button>risalmunadi</Button>
+            {/* <Button>risalmunadi</Button> */}
+          </div>
+          <div className="mx-5 py-2">
+            <img
+              src={Divider}
+              alt=""
+              className="w-100"
+              style={{ objectFit: "cover" }}
+            />
           </div>
           <div className="text-center py-5">
-            <h3 className="cst-font-1 py-3">Gaby</h3>
-            <h2 className="py-2" style={{ letterSpacing: "3px" }}>
+            <h3 className="cst-font-1 py-3">Gabriela Ori Lumondo</h3>
+            {/* <h2 className="py-2" style={{ letterSpacing: "3px" }}>
               {activityData.text4}
-            </h2>
+            </h2> */}
             <div className="py-2">
               <h6>{activityData.text5}</h6>
               <h6>{activityData.text6}</h6>
             </div>
-            <Button>gaby</Button>
+            {/* <Button>gaby</Button> */}
           </div>
         </Col>
       </Row>

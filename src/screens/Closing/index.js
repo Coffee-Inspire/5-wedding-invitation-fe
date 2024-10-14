@@ -5,7 +5,7 @@ import Logo from "../../assets/images/logo.png";
 function Closing({ music }) {
   const activityData = {
     title: "With Love and Joy",
-    signature: "Risal y Gaby",
+    signature: "Risal & Gaby",
     text: "We would delighted to have you with us to share and celebrate this special day",
   };
 

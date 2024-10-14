@@ -49,18 +49,17 @@ function Ceremony(props) {
         <h2 className="py-4">
           Risal & Gaby
           <br />
-          Wedding
+          Holy Matrimony
         </h2>
-        <h2 className="py-2">Holy Matrimony</h2>
         <p className="py-2">
-          Saturday, 7 December 2024
+          Saturday, 7th December 2024
           <br />
           11:00 WIB until Finish
         </p>
         {currentUrl !== "/gabycolleague" && (
           <div>
             <p className="py-2">
-              IFGF Semarang
+              IFGF Semarang,
               <br />
               Kompol Maksum 195, Semarang
             </p>

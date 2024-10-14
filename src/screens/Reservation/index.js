@@ -19,7 +19,6 @@ function Reservation() {
   const optionGuestCount = [
     { value: 1, label: "1" },
     { value: 2, label: "2" },
-    { value: 3, label: "3" },
   ];
 
   const optionGuestStatus = [
@@ -92,21 +91,6 @@ function Reservation() {
               disabled={pingStatus !== 200 || isFetching}
             />
             <Controller
-              name="guestCount"
-              control={control}
-              render={({ field }) => (
-                <Select
-                  {...field}
-                  className="my-3 text-start"
-                  placeholder="Number of person"
-                  isDisabled={pingStatus !== 200 || isFetching}
-                  isLoading={pingStatus !== 200 || isFetching}
-                  options={optionGuestCount}
-                  styles={colourStyles}
-                />
-              )}
-            />
-            <Controller
               name="guestStatus"
               control={control}
               render={({ field }) => (
@@ -117,6 +101,21 @@ function Reservation() {
                   isDisabled={pingStatus !== 200 || isFetching}
                   isLoading={pingStatus !== 200 || isFetching}
                   options={optionGuestStatus}
+                  styles={colourStyles}
+                />
+              )}
+            />
+            <Controller
+              name="guestCount"
+              control={control}
+              render={({ field }) => (
+                <Select
+                  {...field}
+                  className="my-3 text-start"
+                  placeholder="Number of person"
+                  isDisabled={pingStatus !== 200 || isFetching}
+                  isLoading={pingStatus !== 200 || isFetching}
+                  options={optionGuestCount}
                   styles={colourStyles}
                 />
               )}

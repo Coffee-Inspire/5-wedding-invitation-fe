@@ -41,10 +41,10 @@ function Cover(props) {
           <h1 className="py-4 display-3" style={{ letterSpacing: "8px" }}>
             Risal & Gaby
           </h1>
-          {guest && (
+          {true && (
             <>
               <p className="cst-cover-dear">Special Invitation to</p>
-              <h4 className="cst-cover-guest my-4">{guest}</h4>
+              <h4 className="cst-cover-guest my-4">{guest || "-"}</h4>
             </>
           )}
           <p className="cst-cover-dear">
