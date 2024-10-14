@@ -46,22 +46,23 @@ function Ceremony(props) {
         </div>
       </div>
       <div style={{ padding: "150px 0 150px 0", letterSpacing: "1.5px" }}>
-        <h2 className="py-2">
+        <h2 className="py-4">
           Risal & Gaby
           <br />
           Wedding
         </h2>
+        <h2 className="py-2">Holy Matrimony</h2>
         <p className="py-2">
-          Saturday 7 December 2024
+          Saturday, 7 December 2024
           <br />
           11:00 WIB until Finish
         </p>
         {currentUrl !== "/gabycolleague" && (
           <div>
             <p className="py-2">
-              Kompol Maksum 195, Semarang
-              <br />
               IFGF Semarang
+              <br />
+              Kompol Maksum 195, Semarang
             </p>
             <a
               target="_blank"
