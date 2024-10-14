@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
@@ -17,7 +17,7 @@ function App() {
         <Route path="/risalfriend" element={<Screen />} exact />
         <Route path="/gabycolleague" element={<Screen />} exact />
         <Route path="*" element={<Navigate to="/404" />} />
-        <Route path="/404" element={<h1>Page not found</h1>} />
+        <Route path="/404" element={<h1 className="p-3">Page not found</h1>} />
       </Routes>
     </Router>
   );
