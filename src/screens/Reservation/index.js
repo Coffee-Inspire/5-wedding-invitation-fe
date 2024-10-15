@@ -22,8 +22,8 @@ function Reservation() {
   ];
 
   const optionGuestStatus = [
-    { value: "Hadir", label: "Hadir" },
-    { value: "Tidak Dapat Hadir", label: "Tidak Dapat Hadir" },
+    { value: "Attending", label: "Attending" },
+    { value: "Not Attending", label: "Not Attending" },
   ];
 
   const colourStyles = {
@@ -73,7 +73,7 @@ function Reservation() {
   const watchGuestStatus = watch("guestStatus");
   useEffect(() => {
     if (watchGuestStatus) {
-      if (watchGuestStatus.value === "Tidak Dapat Hadir") {
+      if (watchGuestStatus.value === "Not Attending") {
         setDisableGuestCount(true);
       } else setDisableGuestCount(false);
     }
