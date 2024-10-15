@@ -21,6 +21,8 @@ import Fifteen from "../../assets/photo/gallery/15.webp";
 import Sixteen from "../../assets/photo/gallery/16.webp";
 import Seventeen from "../../assets/photo/gallery/17.webp";
 import Eighteen from "../../assets/photo/gallery/18.webp";
+import Nineteen from "../../assets/photo/gallery/19.webp";
+import { Row, Col } from "react-bootstrap";
 
 function Gallery() {
   const [modalState, setModalState] = useState(false);
@@ -156,6 +158,7 @@ function Gallery() {
             })}
           </Slider>
         </div>
+
         <div className="cst-gallery-img-frame-2 px-2 py-2">
           <img
             className="cst-gallery-img cst-gallery-image-crop-top-large"
@@ -189,13 +192,22 @@ function Gallery() {
             );
           })}
         </Slider>
-        <div className="cst-gallery-img-frame-2 px-2 py-2">
-          <img
-            className="cst-gallery-img cst-gallery-image-crop-top-medium"
-            src={Seventeen}
-            alt=""
-          />
-        </div>
+        <Row className="px-3">
+          <Col md={6} xs={12} className="px-0">
+            <div className="cst-gallery-img-frame-2 px-2 py-2">
+              <img
+                className="cst-gallery-img cst-gallery-image-crop-left-medium"
+                src={Seventeen}
+                alt=""
+              />
+            </div>
+          </Col>
+          <Col md={6} xs={12} className="px-0">
+            <div className="cst-gallery-img-frame-2 px-2 py-2">
+              <img className="cst-gallery-img" src={Nineteen} alt="" />
+            </div>
+          </Col>
+        </Row>
         <div className="cst-gallery-img-frame-2 px-2 py-2">
           <img
             className="cst-gallery-img cst-gallery-image-crop-top-medium"
