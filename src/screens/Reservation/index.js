@@ -35,7 +35,8 @@ function Reservation() {
     },
   };
 
-  const { register, control, handleSubmit, reset } = useForm();
+  const { register, control, handleSubmit, reset, watch } = useForm();
+  const [disableGuestCount, setDisableGuestCount] = useState(false);
   const [isFetching, setIsFetching] = useState(true);
   const [pingStatus, setPingStatus] = useState(500);
   const onSubmit = (data) => postData(data);
@@ -44,10 +45,9 @@ function Reservation() {
     data = {
       ...data,
       guestName: toCapitalize(data.guestName),
-      guestCount: data.guestCount.value,
-      guestStatus: data.guestStatus.value,
+      guestStatus: data.guestStatus?.value,
+      guestCount: data.guestCount?.value,
     };
-    console.log(data);
     setIsFetching(true);
     axios
       .post(apis.rsvp.create, data)
@@ -69,6 +69,15 @@ function Reservation() {
 
     axios.get(apis.rsvp.get).then(() => {});
   }, []);
+
+  const watchGuestStatus = watch("guestStatus");
+  useEffect(() => {
+    if (watchGuestStatus) {
+      if (watchGuestStatus.value === "Tidak Dapat Hadir") {
+        setDisableGuestCount(true);
+      } else setDisableGuestCount(false);
+    }
+  }, [watchGuestStatus]);
 
   return (
     <div
@@ -111,9 +120,12 @@ function Reservation() {
               render={({ field }) => (
                 <Select
                   {...field}
+                  // disabled={disableGuestCount}
                   className="my-3 text-start"
                   placeholder="Number of person"
-                  isDisabled={pingStatus !== 200 || isFetching}
+                  isDisabled={
+                    pingStatus !== 200 || isFetching || disableGuestCount
+                  }
                   isLoading={pingStatus !== 200 || isFetching}
                   options={optionGuestCount}
                   styles={colourStyles}

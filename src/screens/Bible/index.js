@@ -4,7 +4,7 @@ import { Row, Col } from "react-bootstrap";
 function Bible() {
   const activityData = {
     title: "Yosua 24:15b",
-    text: "but as for me and my house, we will serve the LORD.",
+    text: "But as for me and my house, we will serve the LORD.",
   };
 
   return (
@@ -21,8 +21,8 @@ function Bible() {
             style={{
               display: "block",
               height: "40px",
-              borderLeft: "2px solid #303031", // Adjust color and width as needed
-              margin: "0 20px", // Space between the line and the text
+              borderLeft: "2px solid #303031",
+              margin: "0 20px",
               opacity: "0.3",
             }}
           />
