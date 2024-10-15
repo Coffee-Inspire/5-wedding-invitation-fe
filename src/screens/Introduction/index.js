@@ -41,7 +41,9 @@ function Introduction(props) {
           <h1 className="pt-3 display-3" style={{ letterSpacing: "5px" }}>
             Risal & Gaby
           </h1>
-          <p>Saturday, 7th December 2024</p>
+          <p>
+            Saturday, 7<sup>th</sup> December 2024
+          </p>
         </div>
         <div className="d-flex justify-content-center py-4">
           <CountdownTimer />

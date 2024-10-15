@@ -52,7 +52,7 @@ function Ceremony(props) {
           Holy Matrimony
         </h2>
         <p className="py-2">
-          Saturday, 7th December 2024
+          Saturday, 7<sup>th</sup> December 2024
           <br />
           11:00 WIB until Finish
         </p>
