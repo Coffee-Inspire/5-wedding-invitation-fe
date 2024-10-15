@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 
 function Bible() {
   const activityData = {
-    title: "Yosua 24:15b",
+    title: "Joshua 24:15b",
     text: "But as for me and my house, we will serve the LORD.",
   };
 

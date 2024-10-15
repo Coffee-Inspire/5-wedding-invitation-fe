@@ -36,7 +36,7 @@ function Cover(props) {
       }
     >
       <img className="cst-cover-photo" src={PhotoCover} alt="" />
-      <Row className="m-0 cst-cover-content">
+      <Row className="mx-0 cst-cover-content d-flex flex-column justify-content-between align-items-center">
         <Col xs={12} md={8} className="px-0 text-center">
           <h1 className="py-4 display-3" style={{ letterSpacing: "8px" }}>
             Risal & Gaby
@@ -47,6 +47,8 @@ function Cover(props) {
               <h4 className="cst-cover-guest my-4">{guest || "-"}</h4>
             </>
           )}
+        </Col>
+        <Col xs={12} md={8} className="px-0 text-center">
           <p className="cst-cover-dear">
             We cordially invite you to attend our wedding ceremony.
           </p>
