@@ -193,7 +193,7 @@ body {
   width: 100%;
   height: 100%;
   color: #fff;
-  padding: 150px 0 150px 0;
+  padding: 150px 0 55px 0;
 }
 
 .cst-cover-bridegroom {
@@ -558,6 +558,10 @@ body {
 
 // iPhone resolution
 @media only screen and (max-width: 460px) {
+  .cst-cover-content {
+    padding-bottom: 150px;
+  }
+
   .cst-intro-img-1 {
     height: 100vh;
     transform: scale(1);
