@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Carousel, Image } from "react-bootstrap";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "animate.css/animate.min.css";
 
 import Intro1 from "../../assets/photo/intro-1.webp";
@@ -19,19 +20,54 @@ function Introduction(props) {
       <div className="cst-intro-sub-wrap position-relative">
         <Carousel fade controls={false} indicators={false}>
           <Carousel.Item>
-            <Image src={Intro1} alt="" className="cst-intro-img-1" />
+            <LazyLoadImage
+              effect="blur"
+              alt={""}
+              height="100%"
+              width="100%"
+              className="cst-intro-img-1"
+              src={Intro1}
+            />
           </Carousel.Item>
           <Carousel.Item>
-            <Image src={Intro2} alt="" className="cst-intro-img-2" />
+            <LazyLoadImage
+              effect="blur"
+              alt={""}
+              height="100%"
+              width="100%"
+              className="cst-intro-img-2"
+              src={Intro2}
+            />
           </Carousel.Item>
           <Carousel.Item>
-            <Image src={Intro3} alt="" className="cst-intro-img-3" />
+            <LazyLoadImage
+              effect="blur"
+              alt={""}
+              height="100%"
+              width="100%"
+              className="cst-intro-img-3"
+              src={Intro3}
+            />
           </Carousel.Item>
           <Carousel.Item>
-            <Image src={Intro4} alt="" className="cst-intro-img-4" />
+            <LazyLoadImage
+              effect="blur"
+              alt={""}
+              height="100%"
+              width="100%"
+              className="cst-intro-img-4"
+              src={Intro4}
+            />
           </Carousel.Item>
           <Carousel.Item>
-            <Image src={Intro5} alt="" className="cst-intro-img-5" />
+            <LazyLoadImage
+              effect="blur"
+              alt={""}
+              height="100%"
+              width="100%"
+              className="cst-intro-img-5"
+              src={Intro5}
+            />
           </Carousel.Item>
         </Carousel>
       </div>

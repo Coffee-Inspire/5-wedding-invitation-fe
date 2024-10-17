@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 import PlayButton from "../components/PlayButton";
 import Introduction from "./Introduction";

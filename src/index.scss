@@ -448,8 +448,7 @@ body {
   overflow: hidden;
 }
 
-.cst-ceremony-title-bg {
-  background-image: url("./assets/photo/ceremony.webp");
+%cst-title-bg-base {
   position: absolute;
   top: 0;
   left: 0;
@@ -458,7 +457,18 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.cst-title-bg-placeholder {
+  @extend %cst-title-bg-base;
+  background-color: rgb(0, 0, 0);
+}
+
+.cst-ceremony-title-bg {
+  @extend %cst-title-bg-base;
+  background-image: url("./assets/photo/ceremony.webp");
   filter: brightness(40%);
+  transition: 0.5s ease;
 }
 
 .cst-gift-title-wrap {
@@ -469,16 +479,10 @@ body {
 }
 
 .cst-gift-title-bg {
+  @extend %cst-title-bg-base;
   background-image: url("./assets/photo/gift.webp");
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   filter: brightness(50%);
+  transition: 0.5s ease;
 }
 
 .cst-closing-wrap {
@@ -489,15 +493,8 @@ body {
 }
 
 .cst-closing-bg {
+  @extend %cst-title-bg-base;
   background-image: url("./assets/photo/closing.webp");
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   z-index: -1;
   filter: brightness(40%);
 }

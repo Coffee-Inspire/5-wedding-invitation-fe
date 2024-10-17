@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Form } from "react-bootstrap";
+import { Row, Col, Form, Alert } from "react-bootstrap";
 import axios from "axios";
 import { useForm, Controller } from "react-hook-form";
 import toCapitalize from "../../helpers/toCapitalize";
@@ -7,9 +7,11 @@ import toCapitalize from "../../helpers/toCapitalize";
 import Button from "../../components/Button";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { apis } from "../../api/apis";
-import Select, { StylesConfig } from "react-select";
+import Select from "react-select";
 
 function Reservation() {
+  const [alertMessageShow, setAlertMessageShow] = useState(false);
+
   const activityData = {
     title: "RSVP",
     text: "Guests are kindly requested to fill out the attendance form below",
@@ -51,7 +53,7 @@ function Reservation() {
     setIsFetching(true);
     axios
       .post(apis.rsvp.create, data)
-      .then(() => {})
+      .then(() => setAlertMessageShow(true))
       .finally(() => setIsFetching(false));
     reset();
   };
@@ -79,6 +81,14 @@ function Reservation() {
     }
   }, [watchGuestStatus]);
 
+  useEffect(() => {
+    if (alertMessageShow) {
+      setTimeout(() => {
+        setAlertMessageShow(false);
+      }, 5000);
+    }
+  }, [alertMessageShow]);
+
   return (
     <div
       className="text-center cst-bg-2"
@@ -90,7 +100,7 @@ function Reservation() {
 
       <p className="text-center p-3">{activityData.text}</p>
 
-      <Row className="g-0 d-flex justify-content-center">
+      <Row className="g-0 d-flex flex-column align-items-center justify-content-center">
         <Col xs={11} md={6}>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Control
@@ -139,6 +149,16 @@ function Reservation() {
               {activityData.buttonText}
             </Button>
           </Form>
+        </Col>
+        <Col xs={11} md={6} className="pt-4">
+          <Alert
+            variant="success"
+            dismissible
+            show={alertMessageShow}
+            onClose={() => setAlertMessageShow(false)}
+          >
+            Thank you for confirming your attendance.
+          </Alert>
         </Col>
       </Row>
     </div>
