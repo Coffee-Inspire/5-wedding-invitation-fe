@@ -5,6 +5,7 @@ import "animate.css/animate.min.css";
 import PhotoCover from "../../assets/photo/cover.webp";
 import Button from "../../components/Button";
 import { fadeIn } from "../../helpers/musicFadeInOut";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Cover(props) {
   const { show, setShow, music } = props;

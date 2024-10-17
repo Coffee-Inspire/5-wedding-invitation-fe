@@ -8,6 +8,7 @@ import timing from "../../helpers/timing";
 import { takeIcon } from "../../data/iconMapper";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import Button from "../../components/Button";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import ImgGentleman from "../../assets/photo/family-1.webp";
 import ImgWoman from "../../assets/photo/family-2.webp";
@@ -41,12 +42,28 @@ function Family() {
               className="d-flex justify-content-end cst-family-img-col-1"
             >
               <div className="cst-family-img-frame-1">
-                <Image src={ImgGentleman} className="cst-family-img-1" alt="" />
+                <LazyLoadImage
+                  effect="blur"
+                  alt={""}
+                  height="100%"
+                  className="cst-family-img-1"
+                  src={ImgGentleman}
+                  width="100%"
+                />
+                {/* <Image src={ImgGentleman} className="cst-family-img-1" alt="" /> */}
               </div>
             </Col>
             <Col xs={6} className="cst-family-img-col-2">
               <div className="cst-family-img-frame-2">
-                <Image src={ImgWoman} className="cst-family-img-2" alt="" />
+                <LazyLoadImage
+                  effect="blur"
+                  alt={""}
+                  height="100%"
+                  className="cst-family-img-2"
+                  src={ImgWoman}
+                  width="100%"
+                />
+                {/* <Image src={ImgWoman} className="cst-family-img-2" alt="" /> */}
               </div>
             </Col>
           </Row>
@@ -85,34 +102,6 @@ function Family() {
         </Col>
       </Row>
     </div>
-    // <Row
-    //   className="cst-bg-6 text-white text-center py-5"
-    //   style={{ letterSpacing: "1px" }}
-    // >
-    //   <span>{takeIcon("cross")}</span>
-    //   <h5
-    //     className="my-4"
-    //     dangerouslySetInnerHTML={{ __html: activityData.title }}
-    //   />
-    //   <h3 className="my-3 cst-color-2" style={{ letterSpacing: "4px" }}>
-    //     {activityData.text1}
-    //   </h3>
-    //   <Col xs={12}>
-    //     <h5 dangerouslySetInnerHTML={{ __html: activityData.text2 }} />
-    //   </Col>
-    //   <span>
-    //     <h2 className="my-4 cst-font-3">{"&"}</h2>
-    //   </span>
-    //   <h3 className="my-3 cst-color-2" style={{ letterSpacing: "4px" }}>
-    //     {activityData.text3}
-    //   </h3>
-    //   <Col xs={12}>
-    //     <h5 dangerouslySetInnerHTML={{ __html: activityData.text4 }} />
-    //   </Col>
-    //   <Col xs={12} className="mt-5">
-    //     <h5>{activityData.text5}</h5>
-    //   </Col>
-    // </Row>
   );
 }
 

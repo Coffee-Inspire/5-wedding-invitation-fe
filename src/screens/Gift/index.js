@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "../../components/Button";
+import LazyLoad from "react-lazy-load";
 
 function Gift() {
   const activityData = {
@@ -8,6 +9,7 @@ function Gift() {
     text: "Your greetings and presence are the best gifts for us, but if you would like to give more, please click the button below",
   };
 
+  const [softRender, setSoftRender] = useState(false);
   const [show, setShow] = useState(false);
   const [clickedCopy, setClickedCopy] = useState(false);
 
@@ -55,7 +57,10 @@ function Gift() {
   return (
     <div className="cst-ceremony-wrap cst-bg-2 text-center py-5">
       <div className="cst-gift-title-wrap cst-color-1 d-flex align-items-center justify-content-center">
-        <div className="cst-gift-title-bg" />
+        {softRender && <div className="cst-title-bg-placeholder" />}
+        <LazyLoad onContentVisible={() => setSoftRender(false)}>
+          <div className="cst-gift-title-bg" />
+        </LazyLoad>
         <div className="d-flex align-items-center justify-content-center">
           <div className="p-4 position-relative">
             <h1 className="display-3 py-1" style={{ letterSpacing: "5px" }}>

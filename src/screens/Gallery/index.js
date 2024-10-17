@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import ImageModal from "../../components/ImageModal";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "animate.css/animate.min.css";
 
 import One from "../../assets/photo/gallery/1.webp";
@@ -146,12 +147,21 @@ function Gallery() {
               return (
                 <div key={index} className="px-2">
                   <div className="cst-gallery-img-frame">
-                    <img
+                    <LazyLoadImage
+                      effect="blur"
+                      alt={""}
+                      height="100%"
+                      className={`cst-gallery-img ${item.highlight}`}
+                      src={item.image}
+                      onClick={() => openModal(index, whole)}
+                      width="100%"
+                    />
+                    {/* <img
                       onClick={() => openModal(index, whole)}
                       className={`cst-gallery-img ${item.highlight}`}
                       src={item.image}
                       alt=""
-                    />
+                    /> */}
                   </div>
                 </div>
               );
@@ -160,33 +170,66 @@ function Gallery() {
         </div>
 
         <div className="cst-gallery-img-frame-2 px-2 py-2">
-          <img
+          <LazyLoadImage
+            effect="blur"
+            alt={""}
+            height="100%"
+            className="cst-gallery-img cst-gallery-image-crop-top-large"
+            src={Thirteen}
+            width="100%"
+          />
+          {/* <img
             className="cst-gallery-img cst-gallery-image-crop-top-large"
             src={Thirteen}
             alt=""
-          />
+          /> */}
         </div>
         <div className="cst-gallery-img-frame-2 px-2 py-2">
-          <img
+          <LazyLoadImage
+            effect="blur"
+            alt={""}
+            height="100%"
+            className="cst-gallery-img cst-gallery-image-crop-top-large"
+            src={Fourteen}
+            width="100%"
+          />
+          {/* <img
             className="cst-gallery-img cst-gallery-image-crop-top-large"
             src={Fourteen}
             alt=""
-          />
+          /> */}
         </div>
         <div className="cst-gallery-img-frame-2 px-2 py-2">
-          <img className="cst-gallery-img" src={Fifteen} alt="" />
+          <LazyLoadImage
+            effect="blur"
+            alt={""}
+            height="100%"
+            className="cst-gallery-img"
+            src={Fifteen}
+            width="100%"
+          />
+          {/* <img className="cst-gallery-img" src={Fifteen} alt="" /> */}
         </div>
         <Slider {...rsOptions} className="mx-1">
           {sliderImages2.map((item, index, whole) => {
             return (
               <div key={index} className="px-2">
                 <div className="cst-gallery-img-frame">
-                  <img
+                  <LazyLoadImage
+                    effect="blur"
+                    alt={""}
+                    height="100%"
+                    className={`cst-gallery-img ${item.highlight}`}
+                    src={item.image}
+                    onClick={() => openModal(index, whole)}
+                    width="100%"
+                  />
+                  {/* <img
                     onClick={() => openModal(index, whole)}
                     className={`cst-gallery-img ${item.highlight}`}
                     src={item.image}
                     alt=""
-                  />
+                  /> */}
                 </div>
               </div>
             );
@@ -195,25 +238,49 @@ function Gallery() {
         <Row className="px-3">
           <Col md={6} xs={12} className="px-0">
             <div className="cst-gallery-img-frame-2 px-2 py-2">
-              <img
+              <LazyLoadImage
+                effect="blur"
+                alt={""}
+                height="100%"
+                className="cst-gallery-img cst-gallery-image-crop-left-medium"
+                src={Seventeen}
+                width="100%"
+              />
+              {/* <img
                 className="cst-gallery-img cst-gallery-image-crop-left-medium"
                 src={Seventeen}
                 alt=""
-              />
+              /> */}
             </div>
           </Col>
           <Col md={6} xs={12} className="px-0">
             <div className="cst-gallery-img-frame-2 px-2 py-2">
-              <img className="cst-gallery-img" src={Nineteen} alt="" />
+              <LazyLoadImage
+                effect="blur"
+                alt={""}
+                height="100%"
+                className="cst-gallery-img"
+                src={Nineteen}
+                width="100%"
+              />
+              {/* <img className="cst-gallery-img" src={Nineteen} alt="" /> */}
             </div>
           </Col>
         </Row>
         <div className="cst-gallery-img-frame-2 px-2 py-2">
-          <img
+          <LazyLoadImage
+            effect="blur"
+            alt={""}
+            height="100%"
+            className="cst-gallery-img cst-gallery-image-crop-top-medium"
+            src={Eighteen}
+            width="100%"
+          />
+          {/* <img
             className="cst-gallery-img cst-gallery-image-crop-top-medium"
             src={Eighteen}
             alt=""
-          />
+          /> */}
         </div>
       </div>
       <ImageModal

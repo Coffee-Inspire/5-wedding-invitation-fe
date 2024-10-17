@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import MusicBox from "../../components/MusicBox";
 import Logo from "../../assets/images/logo.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import LazyLoad from "react-lazy-load";
 
 function Closing({ music }) {
   const activityData = {
@@ -9,14 +11,22 @@ function Closing({ music }) {
     text: "We would delighted to have you with us to share and celebrate this special day",
   };
 
+  const [softRender, setSoftRender] = useState(false);
+
   return (
     <div className="cst-closing-wrap text-center d-flex flex-column justify-content-center position-relative">
-      <div className="cst-closing-bg" />
+      {softRender && <div className="cst-title-bg-placeholder" />}
+      <LazyLoad onContentVisible={() => setSoftRender(false)}>
+        <div className="cst-closing-bg" />
+      </LazyLoad>
       <div className="text-center">
-        <img
+        <LazyLoadImage
+          effect="blur"
+          alt={""}
+          height="180px"
           src={Logo}
-          alt=""
-          style={{ width: "180px", height: "180px", objectFit: "cover" }}
+          width="180px"
+          style={{ objectFit: "cover" }}
         />
       </div>
       <h3 className="py-2">{activityData.title}</h3>
