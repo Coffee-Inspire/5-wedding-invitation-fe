@@ -19,7 +19,7 @@ function Introduction(props) {
     <div className="cst-intro-wrap text-center d-flex flex-column justify-content-center">
       <div className="cst-intro-sub-wrap position-relative">
         <Carousel fade controls={false} indicators={false}>
-          {/* <Carousel.Item>
+          <Carousel.Item>
             <LazyLoadImage
               effect="blur"
               alt={""}
@@ -38,7 +38,7 @@ function Introduction(props) {
               className="cst-intro-img-2"
               src={Intro2}
             />
-          </Carousel.Item> */}
+          </Carousel.Item>
           <Carousel.Item>
             <LazyLoadImage
               effect="blur"
@@ -49,7 +49,7 @@ function Introduction(props) {
               src={Intro3}
             />
           </Carousel.Item>
-          {/* <Carousel.Item>
+          <Carousel.Item>
             <LazyLoadImage
               effect="blur"
               alt={""}
@@ -68,7 +68,7 @@ function Introduction(props) {
               className="cst-intro-img-5"
               src={Intro5}
             />
-          </Carousel.Item> */}
+          </Carousel.Item>
         </Carousel>
       </div>
       <div className="cst-intro-content d-flex flex-column justify-content-between">
