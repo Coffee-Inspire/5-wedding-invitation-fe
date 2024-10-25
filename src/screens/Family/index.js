@@ -93,7 +93,7 @@ function Family() {
             {/* <h2 className="py-2" style={{ letterSpacing: "3px" }}>
               {activityData.text4}
             </h2> */}
-            <div className="py-2 px-5 px-md-0">
+            <div className="py-2">
               <h6 className="py-1">{activityData.text5}</h6>
               <h6>Ps. Johny Lumondo</h6>
               <h6>{"&"}</h6>
