@@ -426,16 +426,18 @@ body {
 
 .cst-intro-img-3 {
   @extend %intro-img-size;
-  transform: scale(1) translate(0%, -18%);
+  transform: scale(1) translate(0%, -24%);
 }
 
 .cst-intro-img-4 {
   @extend %intro-img-size;
-  transform: scale(1) translate(0%, -23%);
+  // transform: scale(1) translate(0%, -23%);
+  transform: scale(1.4) translate(-5%, -7%);
 }
 
 .cst-intro-img-5 {
   @extend %intro-img-size;
+  transform: scale(1) translate(0%, -6%);
 }
 
 .cst-ceremony-wrap {
@@ -578,7 +580,7 @@ body {
 
   .cst-intro-img-4 {
     height: 100vh;
-    transform: scale(1.2) translate(3%, -14%);
+    transform: scale(1.4) translate(-12%, -8%);
   }
 
   .cst-intro-img-5 {

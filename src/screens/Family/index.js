@@ -24,13 +24,13 @@ function Family() {
     text3: "✟ Mr. Ahmad Munawar & Mrs. Thio Siok Lan",
     text4: "Gabriela Ori Lumondo",
     text5: "Youngest Daughter of",
-    text6: "Ps. Johny Lumondo & Mrs. Ompin Lamtioma",
+    text6: "Ps. Johny Lumondo & Mrs. Ompin Lamtioma Desmeria br. Sibarani",
     text7: "Together with our beloved parents invited you to our,",
   };
 
   return (
     <div className="cst-bg-2 py-4">
-      <Row className="g-0 d-flex justify-content-center">
+      <Row className="g-0 d-flex justify-content-around">
         <Col
           md={5}
           xs={12}
@@ -50,7 +50,6 @@ function Family() {
                   src={ImgGentleman}
                   width="100%"
                 />
-                {/* <Image src={ImgGentleman} className="cst-family-img-1" alt="" /> */}
               </div>
             </Col>
             <Col xs={6} className="cst-family-img-col-2">
@@ -63,20 +62,21 @@ function Family() {
                   src={ImgWoman}
                   width="100%"
                 />
-                {/* <Image src={ImgWoman} className="cst-family-img-2" alt="" /> */}
               </div>
             </Col>
           </Row>
         </Col>
-        <Col md={5} xs={12}>
+        <Col md={5} xs={12} className="">
           <div className="text-center py-5">
             <h3 className="cst-font-1 py-3">Risal Munadi</h3>
             {/* <h2 className="py-2" style={{ letterSpacing: "3px" }}>
               {activityData.text1}
             </h2> */}
             <div className="py-2">
-              <h6>{activityData.text2}</h6>
-              <h6>{activityData.text3}</h6>
+              <h6 className="py-1">{activityData.text2}</h6>
+              <h6>{"✟ Mr. Ahmad Munawar"}</h6>
+              <h6>{"&"}</h6>
+              <h6>{"Mrs. Thio Siok Lan"}</h6>
             </div>
             {/* <Button>risalmunadi</Button> */}
           </div>
@@ -93,9 +93,11 @@ function Family() {
             {/* <h2 className="py-2" style={{ letterSpacing: "3px" }}>
               {activityData.text4}
             </h2> */}
-            <div className="py-2">
-              <h6>{activityData.text5}</h6>
-              <h6>{activityData.text6}</h6>
+            <div className="py-2 px-5 px-md-0">
+              <h6 className="py-1">{activityData.text5}</h6>
+              <h6>Ps. Johny Lumondo</h6>
+              <h6>{"&"}</h6>
+              <h6>Mrs. Ompin Lamtioma Desmeria br. Sibarani</h6>
             </div>
             {/* <Button>gaby</Button> */}
           </div>
