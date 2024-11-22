@@ -58,9 +58,13 @@ function Ceremony(props) {
         )}
         <div className="pt-5 mt-5">
           <h2>Live Streaming</h2>
-          {/* <a target="_blank" rel="noreferrer" href={""}> */}
-          <Button disabled>COMING SOON</Button>
-          {/* </a> */}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={"http://Ifgfsemarang.org/wedding"}
+          >
+            <Button>WATCH</Button>
+          </a>
         </div>
       </div>
     </div>
